@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>js2PDF demo</title>
+        <script src="./js/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div id="content">
+                <div class="content-banner">
+                    <h2>How Transform HTML Into PDF</h2>
+                </div>
+                <div class="content-main">
+
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+                    <h3>Hello World!</h3>
+
+                </div>
+            </div>
+
+            <button id="html2canvas" class="btn">export PDF</button>
+        </div>
+
+    </body>
+    <script src="./js/jspdf.debug.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <script type="text/javascript">
+    document.getElementById("html2canvas").onclick = function(){
+
+        // 将 id 为 content 的 div 渲染成 canvas
+        html2canvas(document.getElementById("content"), {
+
+            // 渲染完成时调用，获得 canvas
+            onrendered: function(canvas) {
+
+                // 从 canvas 提取图片数据
+                var imgData = canvas.toDataURL('image/jpeg');
+
+                var doc = new jsPDF("p", "mm", "a4");
+                //                               |
+                // |—————————————————————————————|
+                // A0 841×1189
+                // A1 594×841
+                // A2 420×594
+                // A3 297×420
+                // A4 210×297
+                // A5 148×210
+                // A6 105×148
+                // A7 74×105
+                // A8 52×74
+                // A9 37×52
+                // A10 26×37
+                //     |——|———————————————————————————|
+                //                                 |——|——|
+                //                                 |     |
+                doc.addImage(imgData, 'JPEG', 0, 0,210,297);
+
+                doc.save('content.pdf');
+            }
+        });
+
+    }
+    </script>
+
+</html>
