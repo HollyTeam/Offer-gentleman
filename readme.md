@@ -9,4 +9,5 @@
 * [@HuangZhenyang](https://github.com/HuangZhenyang)
 * [@regaliastar](https://github.com/regaliastar)
 
-## project start!
+## tips
+* 主页在Index文件夹内
