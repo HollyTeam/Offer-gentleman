@@ -559,7 +559,7 @@ td,
 	display: block;
 }
 .resume .content .inline {
-	
+
 }
 .resume .content .inline .conedit {
 	user-modify: read-write-plaintext-only;
@@ -580,7 +580,7 @@ td,
     color: #fff;
 }
 [contentEditable=true]:focus:before{
-    
+
 }
 .resume .content .area,
 .resume .content .inline .conedit {
@@ -644,10 +644,10 @@ td,
     margin-right: -16px;
 }
 .resume .content .add-blank .oper .add {
-	
+
 }
 .resume .content .add-blank .oper .remove {
-	
+
 }
 .resume .content .area:HOVER .add-blank .oper {
 	display: none;
@@ -659,7 +659,7 @@ td,
 	margin-top: 0;
 }
 .resume .content .add-blank .add-blank .oper {
-	
+
 }
 .resume .content .add-blank .add-blank .oper .box {
 	width: 0;
@@ -669,7 +669,7 @@ td,
     padding-right: 5px;
 }
 .resume .content .add-blank .add-blank .oper .remove {
-	
+
 }
 .resume .content .first-blank .oper .remove,
 .resume .content .add-blank .first-blank .oper .remove {
@@ -688,7 +688,7 @@ td,
 }
 .more-resume,
 .export-resume {
-	
+
 }
 .more-resume .modal-dialog,
 .export-resume .modal-dialog {
@@ -786,10 +786,10 @@ td,
 	padding: 2px 8px;
 }
 .resume .content .personal-infomation {
-	
+
 }
 .resume .content .personal-infomation .media {
-	
+
 }
 .resume .content .personal-infomation .media .media-left {
 	padding-right: 0;
