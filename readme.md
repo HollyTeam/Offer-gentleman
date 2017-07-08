@@ -11,3 +11,9 @@
 
 ## tips
 * 主页在Index文件夹内
+* Firefox3.6+ or Chrome10+ only
+
+## dependence
+* imagecropper
+* html2canvas
+* jspdf

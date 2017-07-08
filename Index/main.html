@@ -92,7 +92,7 @@
 
 				<div class="col-xs-12 text-right">
 					<button type="button" class="btn btn-info"><img src="images/main/save.png">保存</button>
-					<button type="button" class="btn btn-info"><img src="images/main/download.png">下载</button>
+					<button id="html2canvas" type="button" class="btn btn-info"><img src="images/main/download.png">下载</button>
 					<a target="_blank" href="#">
 						<button type="button" class="btn btn-info"><img src="images/main/help.png">帮助</button>
 					</a>
@@ -105,7 +105,7 @@
 			<span>推荐使用谷歌浏览器（Chrome）、火狐浏览器制作简历。</span><i id="waring_close" class="icomoon-close tipsgb"></i>
 		</div>
 	</div>
-	<div class="container resume">
+	<div id="content" class="container resume">
 		<!--withstart记得删掉-->
 		<div class="row content big-style ">
 			<div class="col-xs-10 col-xs-offset-1 outer-blank">
@@ -556,5 +556,49 @@
 </body>
 
 <script type="text/javascript" src="js/main/avatar.js"></script>
+
+<!-- HTML导出PDF代码 -->
+<script src="./js/main/jspdf.debug.js"></script>
+<script src="./js/main/html2canvas.js"></script>
+<script type="text/javascript">
+
+//see http://blog.csdn.net/pwc1996/article/details/56675541
+
+document.getElementById("html2canvas").onclick = function(){
+
+	// 将 id 为 content 的 div 渲染成 canvas
+	html2canvas(document.getElementById("content"), {
+
+		// 渲染完成时调用，获得 canvas
+		onrendered: function(canvas) {
+
+			// 从 canvas 提取图片数据
+			var imgData = canvas.toDataURL('image/jpeg');
+
+			var doc = new jsPDF("p", "mm", "a4");
+			//                               |
+			// |—————————————————————————————|
+			// A0 841×1189
+			// A1 594×841
+			// A2 420×594
+			// A3 297×420
+			// A4 210×297
+			// A5 148×210
+			// A6 105×148
+			// A7 74×105
+			// A8 52×74
+			// A9 37×52
+			// A10 26×37
+			//     |——|———————————————————————————|
+			//                                 |——|——|
+			//                                 |     |
+			doc.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+
+			doc.save('content.pdf');
+		}
+	});
+
+}
+</script>
 
 </html>
