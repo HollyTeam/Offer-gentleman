@@ -23,12 +23,6 @@
 
     init();
 
-    $('#uploadCoverImg').on('click',function(){
-        //隐藏预览图片，显示裁剪图片
-        document.getElementById('uploadCoverImg').style.display='none';
-        document.getElementById('preview180').style.display='block';
-    })
-
     //旋转图片
     function rotateImage(e){
         switch(e.target.id)
@@ -78,6 +72,10 @@
             alert("文件格式不正确");
             return ;
         }else{
+            //隐藏预览图片，显示裁剪图片
+            document.getElementById('uploadCoverImg').style.display='none';
+            document.getElementById('preview180').style.display='block';
+            document.getElementById('showModal').click();
             cropper.loadImage(fileList[0]);
         }
 

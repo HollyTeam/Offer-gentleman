@@ -134,12 +134,12 @@
 								</div>
 							</div>
 							<div class="col-xs-1 user-photo has-tips" data-tips="photo">
-
-								<a href="#avatarModal" data-toggle="modal" onclick="document.getElementById('inputAvatar').click();">
-									<img src="images/main/avatar.png" class="img-thumbnail photo-img" id="uploadCoverImg" data-toggle="tooltip" data-placement="top" title="推荐上传1寸大小职业照、正装照（选填）">
+								<a id="showModal" href="#avatarModal" data-toggle="modal"></a>
+								<a onclick="document.getElementById('inputAvatar').click();">
+									<img src="images/main/avatar.png" class="img-thumbnail photo-img" id="uploadCoverImg" title="推荐上传1寸大小职业照、正装照（选填）">
 									<!-- 85*105px -->
 									<canvas style="display:none;margin-left: -15px;height: 85px;cursor: pointer;" id="preview180" width="85px" height="105px" class="preview">
-						</canvas>
+									</canvas>
 								</a>
 
 								<input id="imgFile1" type="file" name="imgFile" accept="image/jpg,image/jpeg,image/png" class="upload-item-inputfile" style="width:0;height: 0;margin: -1px auto 0">
