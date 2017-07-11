@@ -20,9 +20,10 @@
 
 ## Interface and data design
 ```
+'POST /main'
 {
 	//简历头
-	name: Number,
+	name: String,
 	address: String,
 	phone: Number,
 	mail: String,
@@ -93,4 +94,7 @@
 		hobby: String	//使用#|#分隔
 	}
 }
+
+//头像图片以二进制形式分开传输
+路径：'POST /main/avatar'
 ```
