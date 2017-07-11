@@ -27,7 +27,6 @@
 	address: String,
 	phone: Number,
 	mail: String,
-	school: String,
 
 	//教育背景,edus: {}表示edus的JSON格式, works: []表work数组, 下亦同
 	edus: {
@@ -38,7 +37,7 @@
 		college: String,	//专业
 		end_time: String,	//毕业时间
 		grade: Number,
-		Honors: String,		//使用#|#分隔, 如'三好学生#|#优秀学生干部'
+		honors: String,		//使用#|#分隔, 如'三好学生#|#优秀学生干部'
 		related_course: String	//使用#|#分隔
 	}
 
