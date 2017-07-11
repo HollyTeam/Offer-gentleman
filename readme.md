@@ -33,7 +33,6 @@
 		school: String,
 		city: String,
 		province: String,
-		country: String,
 		college: String,	//专业
 		end_time: String,	//毕业时间
 		grade: Number,
@@ -47,7 +46,6 @@
 			company: String,
 			city: String,
 			province: String,
-			country: String,
 			position: String,	//职位
 			project: String,	//项目名称
 			start_time: String,
