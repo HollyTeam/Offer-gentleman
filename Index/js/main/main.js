@@ -66,8 +66,10 @@
         $('#saveResume').on('click',function(){
             resume.setResume();
             var INSTANCE = resume.getResume();
-            resume.saveResume(INSTANCE);
+            //resume.saveResume(INSTANCE);
         });
+
+
 
     }
 
@@ -77,35 +79,46 @@
     Resume.prototype.setResume = function(){
         var _self = this;
         this.id = $('input.resume-id').val();
-        this.name = $('div.name').html();
+
+        this.name = $('div.name').html();   //pass
+
         this.photo = $('div.photo').html();
-        this.address = $('div.address').html();
-        this.phone = $('div.phone').html();
-        this.mail = $('div.mail').html();
-        this.language = $('div.language').html();
-        this.skill = $('div.skill').html();
-        this.hobby = $('div.hobby').html();
-        this.related_info = $('div.related-info').html();
-        this.edus.splice(0, this.edus.length);
-        $('.parent-edu .add-blank').each(function() {
-            var _edu = clone(edu);
+
+        this.address = $('div.address').html(); //pass
+
+        this.mail = $('div.mail').html();   //pass
+
+        this.language = $('div.language').html();   //pass
+
+        this.skill = $('div.skill').html(); //pass
+
+        this.hobby = $('div.hobby').html(); //pass
+
+        this.related_info = $('div.related-info').html();   //pass
+
+        //pass
+        $('.parent-edu .add-blank').each(function(edu) {
+            var _edu = {};
             _edu.id = $(this).find('input.edu-exp-id').val();
             _edu.school = $(this).find('div.school').html();
-            _edu.education = Resume.fromType == 2 ? '无' : $(this).find('div.education').html();
+            _edu.education = $(this).find('div.education').html();
             _edu.subject = $(this).find('div.subject').html();
             _edu.edu_experience = $(this).find('div.edu-experience').html();
             _edu.city = $(this).find('div.city').html();
             _edu.start_time = $(this).find('div.start-time').html();
             _edu.end_time = $(this).find('div.end-time').html();
-            this.edus.push(_edu);
+            _self.edus.push(_edu);
         });
-        this.works.splice(0, this.works.length);
-        $('.parent-work, .parent-practice').children('.add-blank').each(function() {
+        //alert(JSON.stringify(this.edus[0]));
+
+        //pass
+        var spe = '|';
+        $('.parent-work, .parent-practice').children('.add-blank').each(function(work) {
 
             if($(this).parent().hasClass('deleted')) {
                 return;
             }
-            var _work = clone(work);
+            var _work = {};
             _work.id = $(this).find('input.work-exp-id').val();
             _work.company = $(this).find('div.company').html();
             _work.company_des = $(this).find('div.company_des').html();
@@ -119,8 +132,10 @@
             _work.start_time = $(this).find('div.start-time').html();
             _work.end_time = $(this).find('div.end-time').html();
             _work.type = $(this).parent().attr('data-type');
-            this.works.push(_work);
+            _self.works.push(_work);
         });
+        //alert(JSON.stringify(this.works[0]));
+
     }
 
     /**
@@ -141,7 +156,36 @@
         })
     }
 
-    //resume.init();
+    resume.init();
 
     resume.print();
+
+    var cs = function() {
+       var Sys = {};
+       var ua = navigator.userAgent.toLowerCase();
+       window.ActiveXObject ? Sys.ie = ua.match(/msie ([\d.]+)/)[1] :
+           document.getBoxObjectFor ? Sys.firefox = ua.match(/firefox\/([\d.]+)/)[1] :
+               window.MessageEvent && !document.getBoxObjectFor ? Sys.chrome = ua.match(/chrome\/([\d.]+)/)[1] :
+                   window.opera ? Sys.opera = ua.match(/opera.([\d.]+)/)[1] :
+                       window.openDatabase ? Sys.safari = ua.match(/version\/([\d.]+)/)[1] : 0;
+
+       //浏览器不支持
+       if(Sys.ie){
+           $('#waring').show();
+       }
+       if(Sys.firefox){
+           $('#waring').show();
+       }
+       if(Sys.safari){
+           $('#waring').show();
+       }
+   }
+
+   //若浏览器不支持，则给出提示
+   //cs();
+   $('#waring_close').on("click",function () {
+       $('#waring').hide();
+
+   })
+
 })();
