@@ -139,11 +139,11 @@
         $('.leader').find('div.club').children().each(function(clu){
             var _club = {};
             var _club.name = $(this).find('div.name').html();
-            var _club.position = $(this).find('div.position').val();
-            var _club.start_time = $(this).find('div.start_time').val();
-            var _club.end_time = $(this).find('div.end_time').val();
-            var _club.sentence_1 = $(this).find('div.sentence_1').val();
-            var _club.sentence_2 = $(this).find('div.sentence_2').val();
+            var _club.position = $(this).find('div.position').html();
+            var _club.start_time = $(this).find('div.start_time').html();
+            var _club.end_time = $(this).find('div.end_time').html();
+            var _club.sentence_1 = $(this).find('div.sentence_1').html();
+            var _club.sentence_2 = $(this).find('div.sentence_2').html();
             _self.leader.club.push(_club);
         })
 
