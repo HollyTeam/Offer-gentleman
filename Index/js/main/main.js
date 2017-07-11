@@ -126,24 +126,24 @@
 
         $('.leader').find('div.organization').children().each(function(org){
             var _organization = {};
-            var _organization.name = $(this).find('div.name').html();
-            var _organization.position = $(this).find('div.position').html();
-            var _organization.start_time = $(this).find('div.start_time').html();
-            var _organization.end_time = $(this).find('div.end_time').html();
-            var _organization.sentence_1 = $(this).find('div.sentence_1').html();
-            var _organization.sentence_2 = $(this).find('div.sentence_2').html();
-            var _organization.sentence_3 = $(this).find('div.sentence_3').html();
+            _organization.name = $(this).find('div.name').html();
+            _organization.position = $(this).find('div.position').html();
+            _organization.start_time = $(this).find('div.start_time').html();
+            _organization.end_time = $(this).find('div.end_time').html();
+            _organization.sentence_1 = $(this).find('div.sentence_1').html();
+            _organization.sentence_2 = $(this).find('div.sentence_2').html();
+            _organization.sentence_3 = $(this).find('div.sentence_3').html();
             _self.leader.organization.push(_organization);
         })
 
         $('.leader').find('div.club').children().each(function(clu){
             var _club = {};
-            var _club.name = $(this).find('div.name').html();
-            var _club.position = $(this).find('div.position').html();
-            var _club.start_time = $(this).find('div.start_time').html();
-            var _club.end_time = $(this).find('div.end_time').html();
-            var _club.sentence_1 = $(this).find('div.sentence_1').html();
-            var _club.sentence_2 = $(this).find('div.sentence_2').html();
+            _club.name = $(this).find('div.name').html();
+            _club.position = $(this).find('div.position').html();
+            _club.start_time = $(this).find('div.start_time').html();
+            _club.end_time = $(this).find('div.end_time').html();
+            _club.sentence_1 = $(this).find('div.sentence_1').html();
+            _club.sentence_2 = $(this).find('div.sentence_2').html();
             _self.leader.club.push(_club);
         })
 
