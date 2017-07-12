@@ -119,7 +119,7 @@
 						<div class="row">
 							<div class="col-xs-10 col-xs-offset-1">
 								<h4 class="text-center inline">
-									<div contenteditable="true" class="conedit resume-uname name text-center bold w100" data-placeholder="在此输入您的名字（必填）" data-size="100"></div>
+									<div contenteditable="true" class="conedit resume-uname name text-center bold w100" data-placeholder="[姓名]" data-size="100"></div>
 								</h4>
 								<!--
 							<h4 class="text-center inline">
@@ -128,9 +128,9 @@
 					-->
 
 								<div class="text-center inline area small-font">
-									<div contenteditable="true" class="conedit phone" data-placeholder="在此输入手机号（必填）" data-size="100"></div>&nbsp;
-									<div contenteditable="true" class="conedit mail" data-placeholder="在此输入邮箱（必填）" data-size="255"></div>&nbsp;
-									<div contenteditable="true" class="conedit address" data-placeholder="在此输入地址（必填）" data-size="100"></div>
+									<div contenteditable="true" class="conedit address" data-placeholder="[地点]" data-size="255"></div>
+									<div contenteditable="true" class="conedit phone" data-placeholder="[电话]" data-size="255"></div>
+									<div contenteditable="true" class="conedit mail" data-placeholder="[邮箱地址]" data-size="255"></div>
 								</div>
 							</div>
 							<div class="col-xs-1 user-photo has-tips" data-tips="photo">
@@ -168,29 +168,37 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-xs-12 outer-item parent-edu has-tips" data-tips="edu">
+<!-----------    教育背景  ------------>
+					<div class="col-xs-12 outer-item parent-edu has-tips edus" data-tips="edu">
 						<h4 class="title">教育背景</h4>
 						<div class="row area add-blank first-blank" data-target="edu">
 							<div class="col-xs-9">
 								<div class="inline">
-									<div contenteditable="true" class="conedit school bold w100" data-placeholder="在此输入学校（必填）" data-size="255"></div>
+									<div contenteditable="true" class="conedit school bold w100" data-placeholder="[学校名称]" data-size="255"></div>
 								</div>
 								<div class="inline">
-									<div contenteditable="true" class="conedit subject bold italic" data-placeholder="在此输入专业（必填）" data-size="255"></div>，
-									<div contenteditable="true" class="conedit education bold italic" data-placeholder="在此输入学位（必填）" data-size="255"></div>
+									<div contenteditable="true" class="conedit college bold " data-placeholder="[专业]" data-size="255"></div><!--斜体 italic-->
 								</div>
 								<div class="inline">
-									<div contenteditable="true" class="conedit edu-experience small-font w100" data-placeholder="在此输入教育经历（可选择填写绩点、年级排名、在校获奖情况、参与竞赛情况、担任学生组织职位状况等）（必填）"></div>
+									<div style="float:left"><label>成绩:</label></div>
+									<div style="float:left;width: 680px;" contenteditable="true" class="conedit grade small-font w100" data-placeholder="[xx]" data-size="255"></div>
+								</div>
+								<div class="inline">
+									<div style="float:left"><label>honors:</label></div>
+									<div style="width:663px;" contenteditable="true" class="conedit honors small-font w100" data-placeholder="[xx]"></div>
+								</div>
+								<div class="inline">
+									<div style="float: left"><label>相关课程:</label></div>
+									<div style="width: 646px;" contenteditable="true" class="conedit related_course small-font w100" data-placeholder="[经济学/会计/国际贸易]"></div>
 								</div>
 							</div>
 							<div class="col-xs-3 text-right">
 								<div class="inline">
-									<div contenteditable="true" class="conedit city" data-placeholder="学校所在地" data-size="255"></div>
+									<div contenteditable="true" class="conedit city" data-placeholder="[城市]" data-size="255"></div>
+									<div contenteditable="true" class="conedit province" data-placeholder="[省份/国家]" data-size="255"></div>
 								</div>
 								<div class="inline">
-									<div contenteditable="true" class="conedit start-time italic" data-placeholder="20xx.xx" data-size="32"></div> -
-									<div contenteditable="true" class="conedit end-time italic" data-placeholder="20xx.xx" data-size="32"></div>
+									<div contenteditable="true" class="conedit end-time " data-placeholder="[毕业时间]" data-size="32"></div>
 								</div>
 							</div>
 							<div class="oper">
@@ -205,54 +213,43 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-xs-12 outer-item parent-work remove-item has-tips" data-type="0" data-tips="work">
-						<h4 class="title">工作经验</h4>
+<!--   -----------------     工作经历      ------------------->
+					<div class="col-xs-12 outer-item parent-works remove-item has-tips works" data-type="0" data-tips="work">
+						<h4 class="title">工作经历</h4>
 						<div class="row area add-blank first-blank" data-target="work">
 							<div class="col-xs-9">
 								<div class="inline">
-									<div contenteditable="true" class="conedit company bold w100" data-placeholder="在此输入公司" data-size="255"></div>
+									<div contenteditable="true" class="conedit company bold w100" data-placeholder="[公司名称]" data-size="255"></div>
 								</div>
-								<div class="inline has-tips" data-tips="work-descr">
-									<div contenteditable="true" class="conedit company_des bold w100" data-placeholder="在此输入公司描述（选填）" data-size="1000"></div>
-								</div>
-								<div class="inline">
-									<div contenteditable="true" class="conedit department bold italic" data-placeholder="在此输入业务或部门" data-size="255"></div>，
-									<div contenteditable="true" class="conedit position bold italic" data-placeholder="在此输入职位" data-size="100"></div>
+								<div class="inline has-tips">
+									<div contenteditable="true" class="conedit position bold " data-placeholder="[职位]" data-size="255"></div>
+									<div contenteditable="true" class="conedit project bold " data-placeholder="[项目名称]" data-size="100"></div>
 								</div>
 								<div class="inline small-font parent-experience-wdesc">
-									<div class="row area add-blank first-blank" data-target="experience-wdesc">
-										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item" data-placeholder="在此输入工作经验描述"></div>
-										<div class="oper">
-											<div class="box">
-												<a class="add" href="javascript:;" data-target="experience-pdesc">
-													<img src="images/main/plus.png">
-												</a>
-											</div>
-										</div>
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_1" data-placeholder="[总结句子，说明你做了什么和你的工作的总体结果]"></div>
 									</div>
-									<div class="row area add-blank" data-target="experience-wdesc">
-										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item" data-placeholder="在此输入工作经验描述"></div>
-										<div class="oper">
-											<div class="box">
-												<a class="add" href="javascript:;" data-target="experience-pdesc">
-													<img src="images/main/plus.png">
-												</a>
-												<a class="add" href="javascript:;" data-target="experience-pdesc">
-													<img src="images/main/minus.png">
-												</a>
-											</div>
-										</div>
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_2" data-placeholder="[带领团队做的什么，这导致了更多的效率/时间或省钱/更高的销售]"></div>
+									</div>
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_3" data-placeholder="[分析并得出结论，关键因素是“××”，使项目可行或不可行，导致公司成功进行项目]" style="width: 687px;"></div>
+									</div>
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_4" data-placeholder="[创建了一种新的方法做××，导致效率提高/销售]"></div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xs-3 text-right">
 								<div class="inline">
-									<div contenteditable="true" class="conedit city" name="city" data-placeholder="公司所在地" data-size="255"></div>
+									<div contenteditable="true" class="conedit city" data-placeholder="[城市]" data-size="255"></div>
+									,
+									<div contenteditable="true" class="conedit province" data-placeholder="[省份/国家]" data-size="255"></div>
 								</div>
 								<div class="inline">
-									<div contenteditable="true" class="conedit start-time italic" data-placeholder="20xx.xx" data-size="32"></div> -
-									<div contenteditable="true" class="conedit end-time italic" data-placeholder="20xx.xx" data-size="32"></div>
+									<div contenteditable="true" class="conedit start_time " data-placeholder="[开始时间]" data-size="32"></div>
+									-
+									<div contenteditable="true" class="conedit end_time " data-placeholder="[结束时间]" data-size="32"></div>
 								</div>
 							</div>
 							<div class="oper">
@@ -267,59 +264,81 @@
 							</div>
 							<input type="hidden" class="edu-exp-id">
 						</div>
-						<div class="opt-btns btn-group-vertical">
-							<button class="btn btn-default btn-remove" type="button" title="移除模块"></button>
-							<button class="btn btn-default btn-add" type="button" title="恢复模块"> </button>
-						</div>
-					</div>
-
-					<div class="col-xs-12 outer-item parent-practice remove-item has-tips" data-type="1" data-tips="practice">
-						<h4 class="title">课外实践</h4>
-						<div class="row area add-blank first-blank" data-target="practice">
+						<div class="row area add-blank first-blank" data-target="work">
 							<div class="col-xs-9">
 								<div class="inline">
-									<div contenteditable="true" class="conedit company bold w100" data-placeholder="在此输入组织名称" data-size="255"></div>
+									<div contenteditable="true" class="conedit company bold w100" data-placeholder="[公司名称]" data-size="255"></div>
 								</div>
-								<div class="inline">
-									<div contenteditable="true" class="conedit company_des bold w100" data-placeholder="在此输入组织描述（选填）" data-size="1000"></div>
+								<div class="inline has-tips">
+									<div contenteditable="true" class="conedit position bold " data-placeholder="[职位]" data-size="255"></div>
+									<div contenteditable="true" class="conedit project bold " data-placeholder="[项目名称]" data-size="100"></div>
 								</div>
-								<div class="inline">
-									<div contenteditable="true" class="conedit department bold italic" data-placeholder="在此输入业务或部门" data-size="255"></div>，
-									<div contenteditable="true" class="conedit position bold italic" data-placeholder="在此输入职位" data-size="100"></div>
-								</div>
-								<div class="inline small-font parent-experience-pdesc">
-									<div class="row area add-blank first-blank" data-target="experience-pdesc">
-										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item" data-placeholder="在此输入实践经验描述"></div>
-										<div class="oper">
-											<div class="box">
-												<a class="add" href="javascript:;" data-target="experience-pdesc">
-													<img src="images/main/plus.png">
-												</a>
-											</div>
-										</div>
+								<div class="inline small-font parent-experience-wdesc">
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_1" data-placeholder="[总结句子，说明你做了什么和你的工作的总体结果]"></div>
 									</div>
-									<div class="row area add-blank" data-target="experience-pdesc">
-										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item" data-placeholder="在此输入实践经验描述"></div>
-										<div class="oper">
-											<div class="box">
-												<a class="add" href="javascript:;" data-target="experience-pdesc">
-													<img src="images/main/plus.png">
-												</a>
-												<a class="add" href="javascript:;" data-target="experience-pdesc">
-													<img src="images/main/minus.png">
-												</a>
-											</div>
-										</div>
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_2" data-placeholder="[带领团队做的什么，这导致了更多的效率/时间或省钱/更高的销售]"></div>
+									</div>
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_3" data-placeholder="[分析并得出结论，关键因素是“××”，使项目可行或不可行，导致公司成功进行项目]" style="width: 687px;"></div>
+									</div>
+									<div class="row area add-blank " data-target="experience-wdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_4" data-placeholder="[创建了一种新的方法做××，导致效率提高/销售]"></div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xs-3 text-right">
 								<div class="inline">
-									<div contenteditable="true" class="conedit city" data-placeholder="组织所在地" data-size="255"></div>
+									<div contenteditable="true" class="conedit city" data-placeholder="[城市]" data-size="255"></div>
+									,
+									<div contenteditable="true" class="conedit province" data-placeholder="[省份/国家]" data-size="255"></div>
 								</div>
 								<div class="inline">
-									<div contenteditable="true" class="conedit start-time italic" data-placeholder="20xx.xx" data-size="32"></div> -
-									<div contenteditable="true" class="conedit end-time italic" data-placeholder="20xx.xx" data-size="32"></div>
+									<div contenteditable="true" class="conedit start_time " data-placeholder="[开始时间]" data-size="32"></div>
+									-
+									<div contenteditable="true" class="conedit end_time " data-placeholder="[结束时间]" data-size="32"></div>
+								</div>
+							</div>
+							<div class="oper">
+								<div class="box">
+									<a class="add" href="javascript:;" data-target="experience-pdesc">
+										<img src="images/main/plus.png">
+									</a>
+									<a class="remove" href="javascript:;">
+										<img src="images/main/minus.png">
+									</a>
+								</div>
+							</div>
+							<input type="hidden" class="edu-exp-id">
+						</div>
+					</div>
+<!----          ------------领导经验-------------       -->
+					<div class="col-xs-12 outer-item parent-practice remove-item has-tips leader" data-type="1" data-tips="practice">
+						<h4 class="title">领导经验</h4>
+						<div class="row area add-blank first-blank organization" data-target="practice">
+							<div class="col-xs-9">
+								<div class="inline">
+									<div contenteditable="true" class="conedit name bold " data-placeholder="[学生社团名称]" data-size="255"></div>
+									<div contenteditable="true" class="conedit position bold " data-placeholder="[职位]" data-size="255"></div>
+								</div>
+								<div class="inline small-font parent-experience-pdesc">
+									<div class="row area add-blank first-blank" data-target="experience-pdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_1" data-placeholder="[总结句子，说明你做了什么和你的工作的总体结果]"></div>
+									</div>
+									<div class="row area add-blank" data-target="experience-pdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_2" data-placeholder="[招募超过二十名成员的俱乐部与宣传活动]"></div>
+									</div>
+									<div class="row area add-blank" data-target="experience-pdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_3" data-placeholder="[有组织的会议、演讲活动和社区活动]"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-right">
+								<div class="inline">
+									<div contenteditable="true" class="conedit start_time " data-placeholder="[开始时间]" data-size="32"></div>
+									-
+									<div contenteditable="true" class="conedit end_time " data-placeholder="[结束时间]" data-size="32"></div>
 								</div>
 							</div>
 							<input type="hidden" class="work-exp-id">
@@ -334,39 +353,65 @@
 								</div>
 							</div>
 						</div>
-						<div class="opt-btns btn-group-vertical">`11
-							<button class="btn btn-default btn-remove" type="button" title="移除模块"></button>
-							<button class="btn btn-default btn-add" type="button" title="恢复模块"> </button>
+
+						<div class="row area add-blank first-blank club" data-target="practice">
+							<div class="col-xs-9">
+								<div class="inline">
+									<div contenteditable="true" class="conedit name bold " data-placeholder="[学生俱乐部]" data-size="255"></div>
+									<div contenteditable="true" class="conedit position bold " data-placeholder="[职位]" data-size="255"></div>
+								</div>
+								<div class="inline small-font parent-experience-pdesc">
+									<div class="row area add-blank first-blank" data-target="experience-pdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_1" data-placeholder="[总结句子，说明你做了什么和你的工作的总体结果]"></div>
+									</div>
+									<div class="row area add-blank" data-target="experience-pdesc">
+										<div contenteditable="true" class="col-xs-11 conedit experience-desc list-item sentence_2" data-placeholder="[招募超过二十名成员的俱乐部与宣传活动]"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-right">
+								<div class="inline">
+									<div contenteditable="true" class="conedit start_time " data-placeholder="[开始时间]" data-size="32"></div>
+									-
+									<div contenteditable="true" class="conedit end_time " data-placeholder="[结束时间]" data-size="32"></div>
+								</div>
+							</div>
+							<input type="hidden" class="work-exp-id">
+							<div class="oper">
+								<div class="box">
+									<a class="add" href="javascript:;" data-target="practice">
+										<img src="images/main/plus.png">
+									</a>
+									<a class="remove" href="javascript:;">
+										<img src="images/main/minus.png">
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div class="col-xs-12 outer-item personal-infomation has-tips" data-tips="personal">
-						<h4 class="title">个人信息</h4>
+					<div class="col-xs-12 outer-item personal-infomation has-tips skill" data-tips="personal">
+						<h4 class="title">技能 & 兴趣</h4>
 						<div class="area1">
 							<div class="media inline">
-								<div class="media-left">
-									<div class="lab">语言：</div>
+								<div style="float: left" class="media-left">
+									<div class="lab ">语言：</div>
 								</div>
-								<div contenteditable="true" class="media-body conedit language" data-placeholder="（必填）"></div>
+								<div contenteditable="true" class="media-body conedit language" data-placeholder="英语（熟练，CET-6 640分）；普通话（母语，一甲）；法语（初级）"></div>
 							</div>
 							<div class="media inline">
-								<div class="media-left">
-									<div class="lab">技能：</div>
+								<div  style="float: left"  class="media-left">
+									<div class="lab">计算机：</div>
 								</div>
-								<div contenteditable="true" class="media-body conedit skill" data-placeholder="（必填）"></div>
+								<div contenteditable="true" class="media-body conedit computer" data-placeholder="MS Office熟练；计算机二级 Assess；PS熟练"></div>
 							</div>
-							<div class="media inline">
-								<div class="media-left">
+							<div  class="media inline">
+								<div style="float: left"class="media-left">
 									<div class="lab">兴趣：</div>
 								</div>
-								<div contenteditable="true" class="media-body conedit hobby" data-placeholder="（必填）"></div>
+								<div contenteditable="true" class="media-body conedit hobby" data-placeholder="最好与所申请岗位相契合的内容，不要夸大"></div>
 							</div>
-							<div class="media inline">
-								<div class="media-left">
-									<div class="lab2">其他信息：</div>
-								</div>
-								<div contenteditable="true" class="media-body conedit related-info" data-placeholder="（选填）"></div>
-							</div>
+
 						</div>
 					</div>
 					<input type="hidden" class="resume-id">
@@ -555,51 +600,50 @@
 	<!--	<script src="http://www.xiaozao.org/static/js/resume.js?v=106"></script>-->
 </body>
 
-<script type="text/javascript" src="js/main/avatar.js"></script>
 <script type="text/javascript" src="js/main/main.js"></script>
 
 <!-- HTML导出PDF代码 -->
 <script src="./js/main/jspdf.debug.js"></script>
 <script src="./js/main/html2canvas.js"></script>
 <script type="text/javascript">
+	//see http://blog.csdn.net/pwc1996/article/details/56675541
 
-//see http://blog.csdn.net/pwc1996/article/details/56675541
+	document.getElementById("html2canvas").onclick = function() {
 
-document.getElementById("html2canvas").onclick = function(){
+		// 将 id 为 content 的 div 渲染成 canvas
+		html2canvas(document.getElementById("content"), {
 
-	// 将 id 为 content 的 div 渲染成 canvas
-	html2canvas(document.getElementById("content"), {
+			// 渲染完成时调用，获得 canvas
+			onrendered: function(canvas) {
 
-		// 渲染完成时调用，获得 canvas
-		onrendered: function(canvas) {
+				// 从 canvas 提取图片数据
+				var imgData = canvas.toDataURL('image/jpeg');
 
-			// 从 canvas 提取图片数据
-			var imgData = canvas.toDataURL('image/jpeg');
+				var doc = new jsPDF("p", "mm", "a4");
+				//                               |
+				// |—————————————————————————————|
+				// A0 841×1189
+				// A1 594×841
+				// A2 420×594
+				// A3 297×420
+				// A4 210×297
+				// A5 148×210
+				// A6 105×148
+				// A7 74×105
+				// A8 52×74
+				// A9 37×52
+				// A10 26×37
+				//     |——|———————————————————————————|
+				//                                 |——|——|
+				//                                 |     |
+				doc.addImage(imgData, 'JPEG', 0, 0, 210, 297);
 
-			var doc = new jsPDF("p", "mm", "a4");
-			//                               |
-			// |—————————————————————————————|
-			// A0 841×1189
-			// A1 594×841
-			// A2 420×594
-			// A3 297×420
-			// A4 210×297
-			// A5 148×210
-			// A6 105×148
-			// A7 74×105
-			// A8 52×74
-			// A9 37×52
-			// A10 26×37
-			//     |——|———————————————————————————|
-			//                                 |——|——|
-			//                                 |     |
-			doc.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+				doc.save('content.pdf');
+			}
+		});
 
-			doc.save('content.pdf');
-		}
-	});
+	}
 
-}
 </script>
 
 </html>
