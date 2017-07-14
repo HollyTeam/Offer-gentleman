@@ -292,3 +292,248 @@
    Avatar.init();
 
 })();
+
+
+/*
+*  简历填写提示 jquery toast.    鼠标点击div的时候出现提示
+*  hzy
+*/
+//                         个人信息
+$('.resume-uname').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['只需要 姓名 住址 电话 邮箱，其他都不需要，除了有的要特殊要求附上照片'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+//地址
+$('.address').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['地址无明确要求的情况下写现住址到街道级就好，如四川省成都市高新区益州大道'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+
+//电话
+$('.phone').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['电话号码格式为 131-xxxx-xxxx'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+//邮箱地址
+$('.mail').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: [ '邮箱建议不要用 QQ 邮箱，QQ 邮箱给人感觉很娱乐化，最好开通一个专门找工作的号，可以用 Foxmail/Gmail 正式一点的邮箱，邮箱地址推荐使用自己的名称相关的,例如:Xiaoer.Wang@foxmail.com 这样你发送邮件过去 HR 会在几千封邮件里一眼锁定你的邮件'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+
+//                       教育背景
+$('#edu-background-title').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['教育经历按照时间倒叙依次填写，时间最近的放在第一栏'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+//相关课程 
+$('.related_course').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: [ '相关课程不要把所学的所有课程写上，写和岗位需求和岗位职能相关的课程，例：应聘设计 就要写 CAD PS 等，做贷款类就写风控相关'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+
+//                      工作经历 
+$('#work-experience-title').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['按照时间倒叙的方式来写工作履历，时间最近的放在最开头'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+//工作经验描述  
+$('.parent-experience-wdesc').find('.sentence_1').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士 ①</strong>',
+		text: ['在写每一个 bullet point 的时候必须借助数据来量化你所做事情的成果，学会用数据化的语言描述内容。必须清楚你想要的每个点表达了什么特质或者素质。不要写了 3 点都是一个意思。列如：做了什么事使得公司销售额达到 100 万等/我服务了 300+客户/我审计了一个$500m 的公司等'],
+		icon: 'info',
+		showHideTransition: 'plain',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba'
+	});
+});
+
+$('.parent-experience-wdesc').find('.sentence_2').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士 ②</strong>',
+		text: ['写每一个 bullet point 的时候最好以动词开头，尽量按照 STAR 原则来描述每一个经历即Situation（情况）、Task（任务）、Action（行动）、Result（结果）比如作为某活动的负责人需要为公司做拉新活动，在一个月内，带领一个 5 个人的团队，通过 xxx 方法，取得了10000+新增的成绩'],
+		icon: 'info',
+		showHideTransition: 'slide',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba'
+	});
+});
+
+$('.parent-experience-wdesc').find('.sentence_3').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士 ③</strong>',
+		text: ['在每一个 bullet point 中要尽量包含或者展现 key words，因为越是针对性强的简历越是容易受到认可，甚至大公司直接采用机器筛选简历，如果你的简历中包含他们设置的关键词才能有机会被 HR 看到，否则直接 PASS，所以我们必须学会提炼出 JD 里面的 Key word。每个岗位都有自己对技能的关键词，如 Consulting 需要 Market research;Financial industry 的需要 Analytical skill'],
+		icon: 'info',
+		showHideTransition: 'fade',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba'
+	});
+});
+
+//                          领导经验
+$('.leader').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['挑选能够体现个人能力的实践经历，可以是学校社团工作、校内比赛和活动、校外兼职经历，也是按照 STAR+量化成果的方式去写',
+			   '如果有正式工作经验和实习那么可以将实习放在社会实践栏和社团放在一起，如果没有正式工作，则将实习经历放在工作经验栏',
+			   '实践的内容最好也是和求职岗位需求相关的'],
+		icon: 'info',
+		showHideTransition: 'slide',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba',
+		//bgColor: '#13f6ff',
+	});
+});
+
+
+//                            技能&兴趣
+//语言
+$('.skill').find('.language').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['语言栏建议填写掌握的语言和熟练程度（以证书或分数证明），如 英语（熟练，CET-6 640 分）；法语（熟练）'],
+		icon: 'info',
+		showHideTransition: 'fade',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba'
+	});
+});
+
+//技能
+$('.skill').find('.computer').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['技能栏建议填写与所申请岗位相关的技能，有的时候 JD 里面会明确要求。列如互联网运营类工作可能涉及 PS 熟练、Xmind 精通'],
+		icon: 'info',
+		showHideTransition: 'fade',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba'
+	});
+});
+
+//兴趣
+$('.skill').find('.hobby').on('click',function(){
+	$.toast({
+		heading: '<strong>offer先生小贴士</strong>',
+		text: ['兴趣栏也是写和职位技能素养需求相关的，并尽量量化。比如你应聘体育类工作，你可以写你喜欢运动，跑过几个城市的马拉松'],
+		icon: 'info',
+		showHideTransition: 'fade',//fade,slide,plain
+		hideAfter: 60000, //false
+		stack: 1, //the max number of toast, or false == 1
+		position: 'bottom-right',
+		loader: true,
+		loaderBg: '#09b3ba'
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
