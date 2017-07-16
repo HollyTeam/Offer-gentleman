@@ -161,11 +161,11 @@
 	 * 保存信息，发送到服务器
 	 */
 	Resume.prototype.saveResume = function (INSTANCE) {
-		var date = INSTANCE;
+		var data = INSTANCE;
 		$.ajax({
 			url: '/main',
 			type: 'post',
-			date: date,
+			data: data,
 			success: function () {
 
 			},
@@ -381,7 +381,7 @@ $('#edu-background-title').on('click', function () {
 	});
 });
 
-//相关课程 
+//相关课程
 $('.related_course').on('click', function () {
 	$.toast({
 		heading: '<strong>offer先生小贴士</strong>(教育背景)',
@@ -398,7 +398,7 @@ $('.related_course').on('click', function () {
 });
 
 
-//                      工作经历 
+//                      工作经历
 $('#work-experience-title').on('click', function () {
 	$.toast({
 		heading: '<strong>offer先生小贴士</strong>(工作经历)',
@@ -414,7 +414,7 @@ $('#work-experience-title').on('click', function () {
 	});
 });
 
-//工作经验描述  
+//工作经验描述
 $('.parent-experience-wdesc').find('.sentence_1').on('click', function () {
 	$.toast({
 		heading: '<strong>offer先生小贴士</strong>(工作经历)①',
@@ -553,15 +553,15 @@ $('.edus').find('div.oper').find('a.add').on('click', function () {
 //绑定加号事件
 $('.works').find('div.oper').find('a.add').on('click', function () {
 	$('.works').children('.add-blank').last().after('<div class="row area add-blank first-blank" data-target="work">' +
-											'<div class="col-xs-9">' + 
-											$('.works').children('.add-blank').find('.col-xs-9').html() + 
-											'</div>' + 
-											'<div class="col-xs-3 text-right">' + 
-											$('.works').children('.add-blank').find('.col-xs-3').html() + 
-											'</div>' + 
-											'<div class="oper">                                                         <div class="box">									                        <a class="minus" href="javascript:;"> 										<img src="images/main/minus.png"> 								   </a> 																</div> 															</div>' + 
+											'<div class="col-xs-9">' +
+											$('.works').children('.add-blank').find('.col-xs-9').html() +
+											'</div>' +
+											'<div class="col-xs-3 text-right">' +
+											$('.works').children('.add-blank').find('.col-xs-3').html() +
+											'</div>' +
+											'<div class="oper">                                                         <div class="box">									                        <a class="minus" href="javascript:;"> 										<img src="images/main/minus.png"> 								   </a> 																</div> 															</div>' +
 											'</div>');
-	
+
 	//绑定减号事件
 	$('.works').find('div.oper').find('.minus').on('click', function () {
 		$(this).parent().parent().parent().remove();
@@ -573,15 +573,15 @@ $('.works').find('div.oper').find('a.add').on('click', function () {
 //绑定加号事件   学生社团
 $('.leader').find('.organization').find('div.oper').find('a.add').on('click', function () {
 	$('.leader').children('.organization').last().after('<div class="row area add-blank first-blank organization" data-target="practice">' +
-											'<div class="col-xs-9">' + 
-											$('.leader').children('.organization').find('.col-xs-9').html() + 
-											'</div>' + 
-											'<div class="col-xs-3 text-right">' + 
-											$('.leader').children('.organization').find('.col-xs-3').html() + 
-											'</div>' + 
-											'<div class="oper">                                                         <div class="box">									                        <a class="minus" href="javascript:;"> 										<img src="images/main/minus.png"> 								   </a> 																</div> 															</div>' + 
+											'<div class="col-xs-9">' +
+											$('.leader').children('.organization').find('.col-xs-9').html() +
+											'</div>' +
+											'<div class="col-xs-3 text-right">' +
+											$('.leader').children('.organization').find('.col-xs-3').html() +
+											'</div>' +
+											'<div class="oper">                                                         <div class="box">									                        <a class="minus" href="javascript:;"> 										<img src="images/main/minus.png"> 								   </a> 																</div> 															</div>' +
 											'</div>');
-	
+
 	//绑定减号事件
 	$('.leader').find('.organization').find('div.oper').find('.minus').on('click', function () {
 		$(this).parent().parent().parent().remove();
@@ -591,23 +591,17 @@ $('.leader').find('.organization').find('div.oper').find('a.add').on('click', fu
 //绑定加号事件   俱乐部
 $('.leader').find('.club').find('div.oper').find('a.add').on('click', function () {
 	$('.leader').children('.club').last().after('<div class="row area add-blank first-blank club" data-target="practice">' +
-											'<div class="col-xs-9">' + 
-											$('.leader').children('.club').find('.col-xs-9').html() + 
-											'</div>' + 
-											'<div class="col-xs-3 text-right">' + 
-											$('.leader').children('.club').find('.col-xs-3').html() + 
-											'</div>' + 
-											'<div class="oper">                                                         <div class="box">									                        <a class="minus" href="javascript:;"> 										<img src="images/main/minus.png"> 								   </a> 																</div> 															</div>' + 
+											'<div class="col-xs-9">' +
+											$('.leader').children('.club').find('.col-xs-9').html() +
+											'</div>' +
+											'<div class="col-xs-3 text-right">' +
+											$('.leader').children('.club').find('.col-xs-3').html() +
+											'</div>' +
+											'<div class="oper">                                                         <div class="box">									                        <a class="minus" href="javascript:;"> 										<img src="images/main/minus.png"> 								   </a> 																</div> 															</div>' +
 											'</div>');
-	
+
 	//绑定减号事件
 	$('.leader').find('.club').find('div.oper').find('.minus').on('click', function () {
 		$(this).parent().parent().parent().remove();
 	});
 });
-
-
-
-
-
-
