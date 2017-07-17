@@ -32,6 +32,10 @@
 
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--遮罩需要引入的文件 -->
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -56,13 +60,26 @@
 			<div class="container">
 				<div class="head">
 					<div class="header-left">
-						<a href="index.html">
-							<h1>offer 先生</h1>
-						</a>
+						<a href="index.html" style="display:inline-block"><h1>Offer 先生</h1></a>
+
+						<div style="display:inline-block;margin-left:20px">
+							<p ><a href="https://github.com/HollyTeam/Offer-gentleman" style="color:white">联系我们</a></p>
+						</div>
 					</div>
 					<div class="header-right">
-						<p>555-55-55</p>
-						<p><a href="https://github.com/HollyTeam/Offer-gentleman">contact@us</a></p>
+
+
+						<div style="display:block" class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<p style="display:inline-block;margin-top:10px">洪梅</p> <b style="color:white" class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">登出</a></li>
+
+							</ul>
+						</div>
+
+						<!-- <p><a href="https://github.com/HollyTeam/Offer-gentleman">contact@us</a></p> -->
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -429,7 +446,7 @@
 						<div class="col-sm-6 col-xs-offset-3">
 							<a href="javascript:;" id="downloadResume">
 								<div class="thumbnail">
-									<img src="http://www.xiaozao.org/static/imgs/icon/pdf.png" alt="PDF">
+									<img src="images/main/pdf.png" alt="PDF">
 									<div class="caption">
 										<h4>PDF</h4>
 									</div>
@@ -443,36 +460,6 @@
 		</div>
 	</div>
 
-	<div class="modal fade bs-example-modal-sm2 more-resume" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="false">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-body">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-					<h4 class="text-center red">我需要简历辅导，争夺名企Offer</h4>
-					<div class="row">
-						<div class="col-sm-6">
-							<a href="/course/details/18" target="_blank">
-								<div class="thumbnail">
-									<img src="http://www.xiaozao.org/static/imgs/v2/video.jpg" alt="简历教程">
-									<div class="caption">
-										<h4>斩获名企的简历大神教你<br>管用五年的简历教程</h4>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-6">
-							<div class="thumbnail">
-								<img src="http://www.xiaozao.org/static/imgs/v2/chat_qrcode.jpg" alt="1对1简历提升服务">
-								<div class="caption">
-									<h4>申请与各行业职场前辈<br>1对1简历提升服务<br>(用微信扫码立即申请)</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<span id="resume_content_tips" class="resume-content-tips"></span>
 
 	<!--start-footer-->
@@ -525,17 +512,7 @@
 	</div>
 
 	<!--end-footer-->
-	<!--浏览器提示-->
-	<div id="modal_browsertip" class="browsertip modal" data-backdrop="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-body">
-					<i class="close icomoon-close" data-dismiss="modal"></i>
-					<img class="center-block" src="http://www.xiaozao.org/static/imgs/base/img_browsertip.png" width="100%">
-				</div>
-			</div>
-		</div>
-	</div>
+
 
 	<!--
 <div class="my-elevator">
@@ -554,7 +531,7 @@
 		M.isl = 'true' == 'true';
 
 	</script>
-	<script src="http://www.xiaozao.org/static/js/base.js?v=106"></script>
+	<!-- <script src="http://www.xiaozao.org/static/js/base.js?v=106"></script> -->
 	<script>
 		//数据埋点
 		var _vds = _vds || [];
@@ -592,8 +569,7 @@
 		});
 
 	</script>
-	<!--	<script src="http://www.xiaozao.org/static/js/ajaxfileupload.js"></script>-->
-	<!--	<script src="http://www.xiaozao.org/static/js/resume.js?v=106"></script>-->
+
 </body>
 
 <script type="text/javascript" src="js/main/main.js"></script>

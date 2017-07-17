@@ -149,6 +149,7 @@ a.hvr-sweep-to-right:hover:before,a.hvr-sweep-to-right:focus:before,a.hvr-sweep-
   	text-align: center;
   	margin-top: 7%;
 }
+
 .banner-bottom {
   	background: rgba(255, 255, 255, 0.12);
   	width: 50%;
@@ -161,6 +162,7 @@ a.hvr-sweep-to-right:hover:before,a.hvr-sweep-to-right:focus:before,a.hvr-sweep-
 	-ms-border-radius: 3px;
   	padding: 2.2em 0px;
 }
+
 /*--banner-Part-ends-Here--*/
 .copyrights{
 	text-indent:-9999px;
