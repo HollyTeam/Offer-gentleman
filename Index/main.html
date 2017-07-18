@@ -36,6 +36,9 @@
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<!--字体需要引入的文件 -->
+	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+
 </head>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -49,29 +52,36 @@
 
 </script>
 <style media="screen">
-
-
+	.header-container{
+		padding-top: 15px;
+		max-width: 90%;
+		margin-right: auto;
+	    margin-left: auto;
+	}
+	.header-h {
+	  	padding-bottom: 10px;
+	  	background: rgba(0, 0, 0, 0.75);
+	}
 </style>
+
+<script type="text/javascript"> $youziku.load("body", "05c56270252b4af89131779e03cb871e", "ruibo"); /*$youziku.load("#id1,.class1,h1", "05c56270252b4af89131779e03cb871e", "ruibo");*/ /*．．．*/ $youziku.draw(); </script>
 
 <body>
 	<!--start-banner-->
 	<div id="home">
-		<div class="header">
-			<div class="container">
+		<div class="header-h">
+			<div class="header-container">
 				<div class="head">
 					<div class="header-left">
 						<a href="index.html" style="display:inline-block"><h1>Offer 先生</h1></a>
 
-						<div style="display:inline-block;margin-left:20px">
-							<p ><a href="https://github.com/HollyTeam/Offer-gentleman" style="color:white">联系我们</a></p>
-						</div>
 					</div>
 					<div class="header-right">
 
 
 						<div style="display:block" class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<p style="display:inline-block;margin-top:10px">洪梅</p> <b style="color:white" class="caret"></b>
+							<p style="display:inline-block;margin-top:10px;color:white">洪梅</p> <b style="color:white" class="caret"></b>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="#">登出</a></li>
@@ -474,7 +484,7 @@
 						<span>Offer-gentleman</span></p>
 				</div>
 				<div class="col-md-6 footer-right">
-					<p>Others?</p>
+					<p>联系我们</p>
 					<div class="ftr">
 						<label>+8 (800) 555-555-55</label>
 						<ul>

@@ -147,7 +147,7 @@ a.hvr-sweep-to-right:hover:before,a.hvr-sweep-to-right:focus:before,a.hvr-sweep-
 }
 .banner-top{
   	text-align: center;
-  	margin-top: 7%;
+  	margin-top: 10%;
 }
 
 .banner-bottom {
@@ -155,6 +155,9 @@ a.hvr-sweep-to-right:hover:before,a.hvr-sweep-to-right:focus:before,a.hvr-sweep-
   	width: 50%;
   	margin: 0 auto;
   	border: 2px solid #fff;
+
+
+
   	border-radius: 3px;
   	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -261,7 +264,7 @@ a.hvr-sweep-to-right:hover:before,a.hvr-sweep-to-right:focus:before,a.hvr-sweep-
 /*--about-Part-ends-Here--*/
 /*--gallery-Part-starts-Here--*/
 .gallery{
-	background:#fafafa;
+	background:#f5fafa;
 	padding:7em 0px;
 }
 .gallery-top{
