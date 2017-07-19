@@ -1,10 +1,12 @@
 'use strict';
 
 /**
+ * @author regaliastar
  * 用于服务器的上传操作
  * tips: 未测试
  * @param {function} Resume.prototype.setResume -- 用于得到整张表单数据
  */
+
 (function () {
 	class Resume {
 		/**
@@ -18,15 +20,15 @@
 				throw new Error('不能重复实例化类！');
 			}
 			this.name = null,
-				this.address = null,
-				this.phone = null,
-				this.mail = null,
-				this.edus = {},
-				this.works = [],
-				this.leader = {},
-				this.leader.organization = [],
-				this.leader.club = [],
-				this.skill = {}
+			this.address = null,
+			this.phone = null,
+			this.mail = null,
+			this.edus = {},
+			this.works = [],
+			this.leader = {},
+			this.leader.organization = [],
+			this.leader.club = [],
+			this.skill = {}
 		}
 
 		/**
@@ -48,7 +50,7 @@
 		}
 
 		/**
-		 * @return {JSON} this
+		 * @return {String} this
 		 * 得到数据
 		 */
 		getResume() {
@@ -59,16 +61,25 @@
 
 	/**
 	 * 初始化操作，包括按钮的绑定事件等
+	 * @see check.js 表单验证
+	 * @see function checkRes can be found in check.js
 	 */
+	 var formsubmit = function(r){
+		 resume.saveResume(r);
+		 Avatar.saveImage();
+	 }
+
 	Resume.prototype.init = function () {
 		$('#saveResume').on('click', function () {
 			resume.setResume();
-			var INSTANCE = resume.getResume();
-			resume.saveResume(INSTANCE);
-			Avatar.saveImage();
-			alert(JSON.stringify(INSTANCE));
+			//String 转 JSON
+			var r = JSON.parse(resume.getResume());
+			formsubmit = formsubmit.before(checkRes);
+			formsubmit(r);
 		});
 	}
+
+
 
 	/**
 	 * 得到用户填表的信息
@@ -250,7 +261,7 @@
 		//选个需要的大小
 		var imgData = cropper.getCroppedImageData(180, 180);
 		console.log("上传了：" + imgData);
-		alert("上传了：" + imgData);
+		//alert("上传了：" + imgData);
 		//上传代码
 		$.ajax({
 			type: 'post',
@@ -295,11 +306,11 @@
 })();
 
 
-/*
+/**
+ *  @author  hzy
  *  简历填写提示 jquery toast.    鼠标点击div的时候出现提示
- *  author: hzy
  */
-//                         个人信息
+//个人信息
 $('.resume-uname').on('click', function () {
 	$.toast({
 		heading: '<strong>offer先生小贴士</strong>(个人信息)',
