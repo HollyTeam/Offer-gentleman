@@ -23,7 +23,7 @@
                 this.address = null,
                 this.phone = null,
                 this.mail = null,
-                this.edus = {},
+                this.edus = [],
                 this.works = [],
                 this.leader = {},
                 this.leader.organization = [],
@@ -56,6 +56,22 @@
         getResume() {
             return JSON.stringify(this);
         }
+
+        /**
+         * 重置
+         */
+        reset(){
+            this.name = null,
+            this.address = null,
+            this.phone = null,
+            this.mail = null,
+            this.edus = [],
+            this.works = [],
+            this.leader = {},
+            this.leader.organization = [],
+            this.leader.club = [],
+            this.skill = {}
+        }
     }
 
 
@@ -70,10 +86,12 @@
     }
 
     Resume.prototype.init = function () {
+        var _self = this;
         $('#saveResume').on('click', function () {
-            resume.setResume();
+            _self.setResume();
             //String 转 JSON
-            var r = JSON.parse(resume.getResume());
+            var r = JSON.parse(_self.getResume());
+            //alert(r.name);
             formsubmit = formsubmit.before(checkRes);
             formsubmit(r);
         });
@@ -81,8 +99,8 @@
         //@author HuangZhenyang
         // 绑定下载按钮事件
         $('#html2canvas').on('click', function () {
-            resume.setResume();
-            var r = JSON.parse(resume.getResume());
+            _self.setResume();
+            var r = JSON.parse(_self.getResume());
             download(r);
         });
 
@@ -151,6 +169,8 @@
      * 得到用户填表的信息
      */
     Resume.prototype.setResume = function () {
+        this.reset();
+
         var _self = this;
 
         this.name = $('div.name').html(); //pass
@@ -168,25 +188,20 @@
         this.skill.hobby = $('div.hobby').html(); //pass
 
         //pass
-        this.edus.school = $('.edus').find('div.school').html(); //pass
-
-        this.edus.city = $('.edus').find('div.city').html(); //pass
-
-        this.edus.province = $('.edus').find('div.province').html(); //pass
-
-        this.edus.college = $('.edus').find('div.college').html(); //pass
-
-        this.edus.end_time = $('.edus').find('div.end-time').html(); //pass
-
-        this.edus.grade = $('.edus').find('div.grade').html(); //pass
-
-        this.edus.honors = $('.edus').find('div.honors').html(); //字数大于3会出现br标签
-        //alert(this.edus.honors);
-        this.edus.related_course = $('.edus').find('div.related_course').html(); //字数大于3会出现br标签
-        //alert(this.edus.related_course);
+        $('.parent-edu').children('.add-blank').each(function(edu){
+            var _edu = {};
+            _edu.school = $(this).find('div.school').html(); //pass
+            _edu.city = $(this).find('div.city').html(); //pass
+            _edu.province = $(this).find('div.province').html(); //pass
+            _edu.college = $(this).find('div.college').html(); //pass
+            _edu.end_time = $(this).find('div.end-time').html(); //pass
+            _edu.grade = $(this).find('div.grade').html(); //pass
+            _edu.honors = $(this).find('div.honors').html(); //字数大于3会出现br标签
+            _edu.related_course = $(this).find('div.related_course').html(); //字数大于3会出现br标签
+            _self.edus.push(_edu);
+        })
         //alert(JSON.stringify(this.edus));
-
-        var spe = '#|#';
+        //var spe = '#|#';
         //pass
         $('.parent-works').children('.add-blank').each(function (work) {
             if ($(this).parent().hasClass('deleted')) {
@@ -681,8 +696,3 @@ $('.leader').find('.club').find('div.oper').find('a.add').on('click', function (
         $(this).parent().parent().parent().remove();
     });
 });
-
-
-
-
-
