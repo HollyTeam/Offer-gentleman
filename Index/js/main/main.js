@@ -60,17 +60,17 @@
         /**
          * 重置
          */
-        reset(){
+        reset() {
             this.name = null,
-            this.address = null,
-            this.phone = null,
-            this.mail = null,
-            this.edus = [],
-            this.works = [],
-            this.leader = {},
-            this.leader.organization = [],
-            this.leader.club = [],
-            this.skill = {}
+                this.address = null,
+                this.phone = null,
+                this.mail = null,
+                this.edus = [],
+                this.works = [],
+                this.leader = {},
+                this.leader.organization = [],
+                this.leader.club = [],
+                this.skill = {}
         }
     }
 
@@ -118,14 +118,17 @@
                     //var imgData = cropper.getCroppedImageData(180, 180);  成功
                     // {image: imgData, width: 85, height: 105, style: 'text-right'},
 
+
                     var dd = {
                         content: [
                             {
-                                text: r.name,
+                                text: r.name ||'黄振洋',
                                 style: 'per_info_header'
-                            }, {text: [r.address + "   ", r.phone + "   ", r.mail + "   "], style: 'text_center'},
-                            {text: '教育背景'},
-                            {canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]}
+                            }, {text: [r.address||'四川省成都市双流县666号' + "   ", r.phone||'17760471603' + "   ", r.mail||'745125931@qq.com' + "   "], style: 'text_center'},
+                            /*{text: '教育背景'},
+                             {canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]},
+
+                             {text:r.edus[0].}*/
                         ],
                         defaultStyle: {
                             font: 'simsun'
@@ -140,9 +143,158 @@
                             },
                             text_right: {
                                 alignment: 'right'
+                            },
+                            text_top: {
+                                alignment: 'top'
                             }
                         }
                     };
+
+                    dd.content.push({text: '教育背景'});
+                    dd.content.push({canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]});
+                    r.edus.forEach(function (i) {
+                        dd.content.push({
+                            columns: [
+                                {
+                                    // star-sized columns fill the remaining space
+                                    // if there's more than one star-column, available width is divided equally
+                                    width: '*',
+                                    text: [i.school || '四川大学']
+                                },
+                                {
+                                    // percentage width
+                                    width: 'auto',
+                                    text:[i.city || '成都'+",   ", i.province || '四川'],style:'text_right'
+                                }
+                            ],
+                            // optional space between columns
+                            columnGap: 10
+                        });
+                        dd.content.push({
+                            columns: [
+                                {
+                                    // star-sized columns fill the remaining space
+                                    // if there's more than one star-column, available width is divided equally
+                                    width: '*',
+                                    text: [i.college || '软件工程']
+                                },
+                                {
+                                    // percentage width
+                                    width: 'auto',
+                                    text:[i.end_time || '2019.6'],style:'text_right'
+                                }
+                            ],
+                            // optional space between columns
+                            columnGap: 10
+                        });
+                        dd.content.push({text: ['成绩： ', i.grade || '3.95/4.0']});
+                        dd.content.push({text: ['honors： ', i.honors || '西南地区第一adc,川大最后一张卡牌']});
+                        dd.content.push({text: ['相关课程： ', i.related_course || '操作系统，系统级编程']});
+                    });
+
+                    //工作经历
+                    dd.content.push({text: '工作经历'});
+                    dd.content.push({canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]});
+                    r.works.forEach(function (i) {
+                        dd.content.push({
+                            columns: [
+                                {
+                                    // star-sized columns fill the remaining space
+                                    // if there's more than one star-column, available width is divided equally
+                                    width: '*',
+                                    text: [i.company || '阿里巴巴']
+                                },
+                                {
+                                    // percentage width
+                                    width: 'auto',
+                                    text:[i.city || '成都'+",   ", i.province || '四川'],style:'text_right'
+                                }
+                            ],
+                            // optional space between columns
+                            columnGap: 10
+                        });
+
+                        dd.content.push({
+                            columns: [
+                                {
+                                    // star-sized columns fill the remaining space
+                                    // if there's more than one star-column, available width is divided equally
+                                    width: '*',
+                                    text: [i.position || '大前端' + " ", i.project || '淘宝']
+                                },
+                                {
+                                    // percentage width
+                                    width: 'auto',
+                                    text:[i.start_time || '2015.6'+" - ", i.end_time || '2015.8'],style:'text_right'
+                                }
+                            ],
+                            // optional space between columns
+                            columnGap: 10
+                        });
+                        dd.content.push({ul: [i.sentence_1 || '负责UI设计以及前后端通信', i.sentence_2 || '负责系统架构以及任务分配', i.sentence_3 || '带领EF团队做完淘宝项目，实现每个月50%的增值', i.sentence_4 || '获得阿里妈妈最佳新人奖']});
+                        dd.content.push({text:'   '});
+
+                    });
+
+                    //领导经验
+                    dd.content.push({text: '领导经验'});
+                    dd.content.push({canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]});
+                        //学生社团
+                    r.leader.organization.forEach(function (i) {
+                        dd.content.push({
+                            columns: [
+                                {
+                                    // star-sized columns fill the remaining space
+                                    // if there's more than one star-column, available width is divided equally
+                                    width: '*',
+                                    text: [i.name || '三次元社',i.position||'会长']
+                                },
+                                {
+                                    // percentage width
+                                    width: 'auto',
+                                    text:[i.start_time || '2015.2'+" - ", i.end_time || '2016.2'],style:'text_right'
+                                }
+                            ],
+                            // optional space between columns
+                            columnGap: 10
+                        });
+                        dd.content.push({ul: [i.sentence_1 || '在三次元驰骋', i.sentence_2 || '在三次元浪的飞起', i.sentence_3 || '三次元异世界']});
+                        dd.content.push({text:'   '});
+                    });
+                        //学生俱乐部
+                    r.leader.club.forEach(function (i) {
+                        dd.content.push({
+                            columns: [
+                                {
+                                    // star-sized columns fill the remaining space
+                                    // if there's more than one star-column, available width is divided equally
+                                    width: '*',
+                                    text: [i.name || '乒乓球俱乐部',i.position||'部长']
+                                },
+                                {
+                                    // percentage width
+                                    width: 'auto',
+                                    text:[i.start_time || '2015.2'+" - ", i.end_time || '2016.2'],style:'text_right'
+                                }
+                            ],
+                            // optional space between columns
+                            columnGap: 10
+                        });
+                        dd.content.push({ul: [i.sentence_1 || '带领部员打进全国总决赛', i.sentence_2 || '获得第一名，与马琳握手']});
+                        dd.content.push({text:'   '});
+                    });
+
+                    //技能&兴趣
+                    dd.content.push({text: '技能&兴趣'});
+                    dd.content.push({canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]});
+                    dd.content.push({text:['语言',r.skill.language||'德语,法语']});
+                    dd.content.push({text:['计算机',r.skill.computer||'熟悉java']});
+                    dd.content.push({text:['兴趣爱好',r.skill.hobby||'游泳']});
+
+
+
+
+                    //设置字体
                     pdfMake.fonts = {
                         Roboto: {
                             normal: 'Roboto-Regular.ttf',
@@ -188,7 +340,7 @@
         this.skill.hobby = $('div.hobby').html(); //pass
 
         //pass
-        $('.parent-edu').children('.add-blank').each(function(edu){
+        $('.parent-edu').children('.add-blank').each(function (edu) {
             var _edu = {};
             _edu.school = $(this).find('div.school').html(); //pass
             _edu.city = $(this).find('div.city').html(); //pass
