@@ -81,6 +81,7 @@
      * @see function checkRes can be found in check.js
      */
     var formsubmit = function (r) {
+        //alert('提交了表单');
         resume.saveResume(r);
         Avatar.saveImage();
     }
@@ -287,9 +288,9 @@
                     //技能&兴趣
                     dd.content.push({text: '技能&兴趣'});
                     dd.content.push({canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]});
-                    dd.content.push({text:['语言',r.skill.language||'德语,法语']});
-                    dd.content.push({text:['计算机',r.skill.computer||'熟悉java']});
-                    dd.content.push({text:['兴趣爱好',r.skill.hobby||'游泳']});
+                    dd.content.push({text:['语言','：'+r.skill.language||'：德语,法语']});
+                    dd.content.push({text:['计算机','：'+r.skill.computer||'：熟悉java']});
+                    dd.content.push({text:['兴趣爱好','：'+r.skill.hobby||'：游泳']});
 
 
 
