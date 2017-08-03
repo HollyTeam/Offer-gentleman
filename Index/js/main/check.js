@@ -44,19 +44,35 @@ $(document).ready(function(){
 
         if(!Util.isUserName(resume.name)){
             toastWarning('姓名格式有误');
-            return false;
+            $('div.name').addClass('warn-border');
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
+            return;
         }
         if(resume.address === ''){
             toastWarning('请填写地址');
-            return false;
+            $('div.address').addClass('warn-border');
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
+            return;
         }
         if(!Util.isTel(resume.phone)){
             toastWarning('电话格式有误');
-            return false;
+            $('div.phone').addClass('warn-border');
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
+            return;
         }
         if(!Util.isMail(resume.mail)){
             toastWarning('邮箱格式有误');
-            return false;
+            $('div.mail').addClass('warn-border');
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
+            return;
         }
 
         //教育背景
@@ -68,6 +84,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-edu').children('.add-blank').eq(index).find('div.school').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-edu').children('.add-blank').eq(index).find('div.school').addClass('warn-border');
                 return;
             }
             if(i.city === ''){
@@ -76,6 +93,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-edu').children('.add-blank').eq(index).find('div.city').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-edu').children('.add-blank').eq(index).find('div.city').addClass('warn-border');
                 return;
             }
             if(i.province === ''){
@@ -84,6 +102,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-edu').children('.add-blank').eq(index).find('div.province').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-edu').children('.add-blank').eq(index).find('div.province').addClass('warn-border');
                 return;
             }
             if(i.college === ''){
@@ -92,6 +111,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-edu').children('.add-blank').eq(index).find('div.college').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-edu').children('.add-blank').eq(index).find('div.college').addClass('warn-border');
                 return;
             }
             if(i.end_time === ''){
@@ -100,6 +120,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-edu').children('.add-blank').eq(index).find('div.end-time').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-edu').children('.add-blank').eq(index).find('div.end-time').addClass('warn-border');
                 return;
             }
         });
@@ -113,6 +134,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-works').children('.add-blank').eq(index).find('div.company').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-works').children('.add-blank').eq(index).find('div.company').addClass('warn-border');
                 return;
             }
             if(i.city === ''){
@@ -121,6 +143,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-works').children('.add-blank').eq(index).find('div.city').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-works').children('.add-blank').eq(index).find('div.city').addClass('warn-border');
                 return;
             }
             if(i.province === ''){
@@ -129,6 +152,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-works').children('.add-blank').eq(index).find('div.province').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-works').children('.add-blank').eq(index).find('div.province').addClass('warn-border');
                 return;
             }
             if(i.position === ''){
@@ -137,6 +161,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-works').children('.add-blank').eq(index).find('div.position').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-works').children('.add-blank').eq(index).find('div.position').addClass('warn-border');
                 return;
             }
             if(i.project === ''){
@@ -145,6 +170,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-works').children('.add-blank').eq(index).find('div.project').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-works').children('.add-blank').eq(index).find('div.project').addClass('warn-border');
                 return;
             }
             if(i.start_time === '' || i.end_time === ''){
@@ -153,6 +179,7 @@ $(document).ready(function(){
                        scrollTop: $('.parent-works').children('.add-blank').eq(index).find('div.start_time').offset().top-100
                    }, 800);
                 flag = true;
+                $('.parent-works').children('.add-blank').eq(index).find('div.start_time').addClass('warn-border');
                 return;
             }
         });
@@ -166,6 +193,7 @@ $(document).ready(function(){
                        scrollTop: $('.leader').children('div.organization').eq(index).find('div.name').offset().top-100
                    }, 800);
                 flag = true;
+                $('.leader').children('div.organization').eq(index).find('div.name').addClass('warn-border');
                 return;
             }
             if(i.position === ''){
@@ -174,6 +202,7 @@ $(document).ready(function(){
                        scrollTop: $('.leader').children('div.organization').eq(index).find('div.position').offset().top-100
                    }, 800);
                 flag = true;
+                $('.leader').children('div.organization').eq(index).find('div.position').addClass('warn-border');
                 return;
             }
             if(i.start_time === '' || i.end_time === ''){
@@ -182,6 +211,7 @@ $(document).ready(function(){
                        scrollTop: $('.leader').children('div.organization').eq(index).find('div.start_time').offset().top-100
                    }, 800);
                 flag = true;
+                $('.leader').children('div.organization').eq(index).find('div.start_time').addClass('warn-border');
                 return;
             }
         });
@@ -194,6 +224,7 @@ $(document).ready(function(){
                        scrollTop: $('.leader').children('div.club').eq(index).find('div.name').offset().top-100
                    }, 800);
                 flag = true;
+                $('.leader').children('div.club').eq(index).find('div.name').addClass('warn-border');
                 return;
             }
             if(i.position === ''){
@@ -202,6 +233,7 @@ $(document).ready(function(){
                        scrollTop: $('.leader').children('div.club').eq(index).find('div.position').offset().top-100
                    }, 800);
                 flag = true;
+                $('.leader').children('div.club').eq(index).find('div.position').addClass('warn-border');
                 return;
             }
             if(i.start_time === '' || i.end_time === ''){
@@ -210,11 +242,17 @@ $(document).ready(function(){
                        scrollTop: $('.leader').children('div.club').eq(index).find('div.start_time').offset().top-100
                    }, 800);
                 flag = true;
+                $('.leader').children('div.club').eq(index).find('div.start_time').addClass('warn-border');
                 return;
             }
         });
 
-        if(flag)    return false;
+        if(flag){
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
+            return false;
+        }
 
         //技能&兴趣
         if(resume.skill.language === ''){
@@ -222,6 +260,10 @@ $(document).ready(function(){
             $('html, body').animate({
                    scrollTop: $("div.language").offset().top-100
                }, 800);
+            $("div.language").addClass('warn-border');
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
             return false;
         }
         if(resume.skill.computer === ''){
@@ -229,6 +271,10 @@ $(document).ready(function(){
             $('html, body').animate({
                    scrollTop: $("div.computer").offset().top-100
                }, 800);
+            $("div.computer").addClass('warn-border');
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
             return false;
         }
         if(resume.skill.hobby === ''){
@@ -236,6 +282,10 @@ $(document).ready(function(){
             $('html, body').animate({
                    scrollTop: $("div.hobby").offset().top-100
                }, 800);
+            $("div.hobby").addClass('warn-border');
+            $('.warn-border').on('click',function(evt){
+                $(this).removeClass('warn-border');
+            });
             return false;
         }
     }
@@ -243,4 +293,4 @@ $(document).ready(function(){
     window.checkRes = function(resume){
         return validata(resume);
     }
-})
+});

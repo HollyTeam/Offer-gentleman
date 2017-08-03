@@ -1294,3 +1294,16 @@ textarea{
 #edui_fixedlayer{
 	z-index:10000 !important;
 }
+
+/**
+ * 用于表单提示
+ */
+.warn-border {
+	border: 1px solid #F00 !important;
+
+    margin-left: 0;
+}
+.warn-border:FOCUS,
+.warn-border:HOVER {
+	border-color: #5186BF !important;
+}
