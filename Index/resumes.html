@@ -2,237 +2,360 @@
 <html lang="zh">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Resumes</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumes</title>
 
 
-	<link rel="stylesheet" href="css/resumes/base.css" />
+    <link rel="stylesheet" href="css/resumes/base.css"/>
 
-	<!--必要样式-->
-	<link rel="stylesheet" href="css/resumes/style.css" />
-	<!--自己的-->
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<script src="js/resumes/jquery-2.1.1.min.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<!---- start-smoth-scrolling---->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
+    <!--必要样式-->
+    <link rel="stylesheet" href="css/resumes/style.css"/>
+    <!--自己的-->
+    <!--font awsome-->
+    <link href="css/resumes/font-awesome.css" rel='stylesheet' type='text/css'/>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <script src="js/resumes/jquery-2.1.1.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
 
-	<!--字体需要引入的文件 -->
-	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <!--字体需要引入的文件 -->
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
 
-	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!--start-smoth-scrolling-->
-	<!--start-count-->
-	<link rel="stylesheet" href="css/jquery.countdown.css" />
-	<script src="js/jquery.countdown.js"></script>
-	<script src="js/script.js"></script>
-	<!--end-count-->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!--start-smoth-scrolling-->
+    <!--start-count-->
+    <link rel="stylesheet" href="css/jquery.countdown.css"/>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/script.js"></script>
+    <!--end-count-->
 
-	<!--resumes.css-->
-	<link rel="stylesheet" href="css/resumes/resumes.css" />
-	<!--[if IE]>
-<script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
-<![endif]-->
+    <!--resumes.css-->
+    <link rel="stylesheet" href="css/resumes/resumes.css"/>
+    <!--[if IE]>
+    <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
 </head>
 <style media="screen">
-	.header-container{
-		padding-top: 15px;
-		max-width: 90%;
-		margin-right: auto;
-	    margin-left: auto;
-	}
-	.header-h {
-	  	padding-bottom: 10px;
-	  	background: rgba(0, 0, 0, 0.75);
-	}
+    .header-container {
+        padding-top: 15px;
+        max-width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header-h {
+        padding-bottom: 10px;
+        background: rgba(0, 0, 0, 0.75);
+    }
 </style>
-<script type="text/javascript"> $youziku.load("body", "05c56270252b4af89131779e03cb871e", "ruibo"); /*$youziku.load("#id1,.class1,h1", "05c56270252b4af89131779e03cb871e", "ruibo");*/ /*．．．*/ $youziku.draw(); </script>
+<script type="text/javascript"> $youziku.load("body", "05c56270252b4af89131779e03cb871e", "ruibo");
+/*$youziku.load("#id1,.class1,h1", "05c56270252b4af89131779e03cb871e", "ruibo");*/ /*．．．*/
+$youziku.draw(); </script>
 <body>
-	<!--start-banner-->
-	<div id="home">
-		<div class="header-h">
-			<div class="header-container">
-				<div class="head">
-					<div class="header-left">
-						<a href="index.html" style="display:inline-block"><h1>Offer 先生</h1></a>
+<!--start-banner-->
+<div id="home">
+    <div class="header-h">
+        <div class="header-container">
+            <div class="head">
+                <div class="header-left">
+                    <a href="index.html" style="display:inline-block"><h1>Offer 先生</h1></a>
 
-					</div>
-					<div class="header-right">
+                </div>
+                <div class="header-right">
 
 
-						<div style="display:block" class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<p style="display:inline-block;margin-top:10px;color:white">洪梅</p> <b style="color:white" class="caret"></b>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="#">登出</a></li>
+                    <div style="display:block" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <p style="display:inline-block;margin-top:10px;color:white">洪梅</p> <b style="color:white"
+                                                                                                  class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">登出</a></li>
 
-							</ul>
-						</div>
+                        </ul>
+                    </div>
 
-						<!-- <p><a href="https://github.com/HollyTeam/Offer-gentleman">contact@us</a></p> -->
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--end-banner-->
-	<div id="main" >
-		<div class="container">
-			<div id="effect-5" class="effects clearfix" style="background-color:#EFEFEF;width:auto">
-				<div class="img" style="width:20%">
-					<img src="images/j.jpg" alt="" style="width:250px;height:320px;">
-					<div class="overlay" style="height:89%;">
-						<a href="main.html" class="expand">+</a>
-						<a class="close-overlay hidden">x</a>
-					</div>
-					<div class="pi-price" style="width:90%">&nbsp;</div>
-					<h4 style="text-align:center;width:90%">新建简历</h4>
-				</div>
+                    <!-- <p><a href="https://github.com/HollyTeam/Offer-gentleman">contact@us</a></p> -->
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-banner-->
+<div id="main">
+    <div class="container" id="container">
+        <div id="effect-5" class="effects clearfix" style="background-color:#EFEFEF;width:auto;">
+            <div class="img" style="width:20%;margin-left: 50px;margin-right:20px;">
+                <img src="images/j.jpg" alt="" style="width:250px;height:320px;">
+                <div class="overlay" style="height:89%;">
+                    <a href="main.html" class="expand">+</a>
+                    <a class="close-overlay hidden">x</a>
+                </div>
+                <div class="pi-price" style="width:90%">&nbsp;</div>
+                <h4 style="text-align:center;width:90%">新建简历</h4>
+            </div>
+        </div>
+     <!--   <div class="effects clearfix" style="background-color:#EFEFEF;width:auto;">
+            <div class="img" style="width:20%;margin-left: 50px;margin-right:20px;">
+                <img src="images/j.jpg" alt="" style="width:250px;height:320px;">
+                <div class="overlay" style="height:89%;">
+                    <a href="main.html" class="expand">+</a>
+                    <a class="close-overlay hidden">x</a>
+                </div>
+                <div class="pi-price" style="width:90%">&nbsp;</div>
+                <h4 style="text-align:center;width:90%">新建简历</h4>
+            </div>
 
-				<div class="img" style="width:20%;" >
-					<img src="images/j.jpg" alt="" style="width:250px;height:320px;">
-					<div class="overlay" style="height:89%;">
-						<a href="#" class="expand">+</a>
-						<a class="close-overlay hidden">x</a>
-					</div>
-					<div class="pi-price" style="width:90%"s>&nbsp;</div>
-					<h4 style="text-align:center;" style="width:90%">历史简历-1</h4>
-				</div>
+            <div class="img" style="width:20%;margin-left: 15px;margin-right:20px;">
+                <img src="images/j.jpg" alt="" style="width:250px;height:320px;">
+                <div class="overlay" style="height:89%;">
+                    <a href="#" class="expand">✎</a>
+                    <a class="close-overlay hidden">x</a>
+                </div>
+                <div class="pi-price" style="width:90%" s>&nbsp;</div>
+                <div class="resume-info">
+                    <h4 style="text-align:left;width:90%;">阿里巴巴人工智能工程师</h4>
+                </div>
 
-				<div class="img" style="width:20%" >
-					<img src="images/j.jpg" alt="" style="width:250px;height:320px;">
-					<div class="overlay" style="height:89%;">
-						<a href="#" class="expand">+</a>
-						<a class="close-overlay hidden">x</a>
-					</div>
-					<div class="pi-price" style="width:90%">&nbsp;</div>
-					<h4 style="text-align:center;" style="width:90%">历史简历-2</h4>
-				</div>
 
-				<div class="img" style="width:20%" >
-					<img src="images/j.jpg" alt="" style="width:250px;height:320px;">
-					<div class="overlay" style="height:89%;">
-						<a href="#" class="expand">+</a>
-						<a class="close-overlay hidden">x</a>
-					</div>
-					<div class="pi-price" style="width:90%">&nbsp;</div>
-					<h4 style="text-align:center;" style="width:90%">历史简历-3</h4>
-				</div>
+            </div>
 
-				<div class="img" style="width:19.5%" >
-					<img src="images/j.jpg" alt="" style="width:250px;height:320px;">
-					<div class="overlay" style="height:89%;">
-						<a href="#" class="expand">+</a>
-						<a class="close-overlay hidden">x</a>
-					</div>
-					<div class="pi-price" style="width:90%">&nbsp;</div>
-					<h4 style="text-align:center;" style="width:90%">历史简历-4</h4>
-				</div>
+            <div class="img" style="width:20%;margin-left: 15px;margin-right:20px;">
+                <img src="images/j.jpg" alt="" style="width:250px;height:320px;">
+                <div class="overlay" style="height:89%;">
+                    <a href="#" class="expand">✎</a>
+                    <a class="close-overlay hidden">x</a>
+                </div>
+                <div class="pi-price" style="width:90%">&nbsp;</div>
+                <h4 style="text-align:center;" style="width:90%">历史简历-2</h4>
+            </div>
 
-			</div>
-		</div>
-		<!-- /.container -->
-	</div>
-	<!--start-footer-->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-main">
-				<div class="col-md-6 footer-left">
-					<a href="index.html"><h3>About`Us</h3></a>
-					<p>Address:<span>SiChuan University,</span>
-						<span>Offer-gentleman</span></p>
-				</div>
-				<div class="col-md-6 footer-right">
-					<p>联系我们</p>
-					<div class="ftr">
-						<label>+8 (800) 555-555-55</label>
-						<ul>
-							<li><a href="#"><span class="sky"> </span></a></li>
-							<li><a href="#"><span class="twit"> </span></a></li>
-							<li><a href="#"><span class="fb"> </span></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="footer-bottom">
-				<p>Copyright &copy; 2017.Offer-gentleman</p>
-			</div>
-		</div>
-		<script type="text/javascript">
-			$(document).ready(function () {
-				/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear'
-								 		};
-										*/
+            <div class="img" style="width:20%;margin-left: 15px;margin-right:20px;">
+                <img src="images/j.jpg" alt="" style="width:250px;height:320px;">
+                <div class="overlay" style="height:89%;">
+                    <a href="#" class="expand">✎</a>
+                    <a class="close-overlay hidden">x</a>
+                </div>
+                <div class="pi-price" style="width:90%">&nbsp;</div>
+                <h4 style="text-align:center;" style="width:90%">历史简历-3</h4>
+            </div>
 
-				$().UItoTop({
-					easingType: 'easeOutQuart'
-				});
+            &lt;!&ndash;<div class="img" style="width:20%;margin-left: 50px;margin-right:20px;margin-top: 20px;" >
+                <img src="images/j.jpg" alt="" style="width:250px;height:320px;">
+                <div class="overlay" style="height:89%;">
+                    <a href="#" class="expand">✎</a>
+                    <a class="close-overlay hidden">x</a>
+                </div>
+                <div class="pi-price" style="width:90%">&nbsp;</div>
+                <h4 style="text-align:center;" style="width:90%">历史简历-4</h4>
+            </div>
 
-			});
-		</script>
-		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	</div>
+            <div class="img" style="width:20%;margin-left: 15px;margin-right:20px;" >
+                <img src="images/j.jpg" alt="" style="width:250px;height:320px;">
+                <div class="overlay" style="height:89%;">
+                    <a href="#" class="expand">✎</a>
+                    <a class="close-overlay hidden">x</a>
+                </div>
+                <div class="pi-price" style="width:90%">&nbsp;</div>
+                <h4 style="text-align:center;" style="width:90%">历史简历-5</h4>
+            </div>&ndash;&gt;
+        </div>-->
+    </div>
+    <!-- /.container -->
+</div>
+<!--start-footer-->
+<div class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="col-md-6 footer-left">
+                <a href="index.html"><h3>About`Us</h3></a>
+                <p>Address:<span>SiChuan University,</span>
+                    <span>Offer-gentleman</span></p>
+            </div>
+            <div class="col-md-6 footer-right">
+                <p>联系我们</p>
+                <div class="ftr">
+                    <label>+8 (800) 555-555-55</label>
+                    <ul>
+                        <li><a href="#"><span class="sky"> </span></a></li>
+                        <li><a href="#"><span class="twit"> </span></a></li>
+                        <li><a href="#"><span class="fb"> </span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2017.Offer-gentleman</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+             var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+             };
+             */
 
-	<!--end-footer-->
-	<script type="text/javascript" src="js/resumes/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/resumes/modernizr.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			if (Modernizr.touch) {
-				// show the close overlay button
-				$(".close-overlay").removeClass("hidden");
-				// handle the adding of hover class when clicked
-				$(".img").click(function (e) {
-					if (!$(this).hasClass("hover")) {
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
 
-						$(this).addClass("hover");
-					}
-				});
-				// handle the closing of the overlay
-				$(".close-overlay").click(function (e) {
-					e.preventDefault();
-					e.stopPropagation();
-					if ($(this).closest(".img").hasClass("hover")) {
+        });
+    </script>
+    <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover"
+                                                                             style="opacity: 1;"> </span></a>
+</div>
 
-						$(this).closest(".img").removeClass("hover");
-					}
-				});
-			} else {
-				// handle the mouseenter functionality
-				$(".img").mouseenter(function () {
+<!--end-footer-->
+<script type="text/javascript" src="js/resumes/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/resumes/modernizr.js"></script>
+<!--设置overlay效果-->
+<!--<script type="text/javascript">
+    $(document).ready(function () {
+        if (Modernizr.touch) {
+            // show the close overlay button
+            $(".close-overlay").removeClass("hidden");
+            // handle the adding of hover class when clicked
+            $(".img").click(function (e) {
+                if (!$(this).hasClass("hover")) {
 
-						$(this).addClass("hover");
-					})
-					// handle the mouseleave functionality
-					.mouseleave(function () {
-						$(this).removeClass("hover");
-					});
-			}
-		});
-	</script>
+                    $(this).addClass("hover");
+                }
+            });
+            // handle the closing of the overlay
+            $(".close-overlay").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if ($(this).closest(".img").hasClass("hover")) {
+
+                    $(this).closest(".img").removeClass("hover");
+                }
+            });
+        } else {
+            // handle the mouseenter functionality
+            $(".img").mouseenter(function () {
+
+                $(this).addClass("hover");
+            })
+            // handle the mouseleave functionality
+                .mouseleave(function () {
+                    $(this).removeClass("hover");
+                });
+        }
+    });
+</script>-->
+
+<script type="text/javascript" src="js/resumes/resumes.js"></script>
+
+<!--测试-->
+<!--<script src="http://mockjs.com/dist/mock.js"></script>
+<script type="text/javascript">
+    var data = {
+            "data":[{
+                "imgUrl":"images/j.jpg",
+                "resumeHref":"/resume/001",
+                "resumeTitle":"阿里巴巴人工智能工程师",
+                "completeTime":"2017-7-8 08:24"
+            },{
+                "imgUrl":"images/j.jpg",
+                "resumeHref":"/resume/001",
+                "resumeTitle":"阿里巴巴人工智能工程师",
+                "completeTime":"2017-7-8 08:24"
+            },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                },
+                {
+                    "imgUrl":"images/j.jpg",
+                    "resumeHref":"/resume/001",
+                    "resumeTitle":"阿里巴巴人工智能工程师",
+                    "completeTime":"2017-7-8 08:24"
+                }
+            ]
+        }
+    ;
+    Mock.mock('/test', data);
+</script>-->
+<!--测试-->
 
 </body>
 
