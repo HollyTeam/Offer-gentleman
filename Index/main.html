@@ -584,58 +584,10 @@
 <script type="text/javascript" src="js/main/main.js"></script>
 <script type="text/javascript" src="js/main/check.js"></script>
 <script type="text/javascript" src="js/main/util.js"></script>
-<script>
-
-$('.warn-border').on('click',function(evt){
-	alert(1);
-	$(this).removeClass('warn-border');
-})
-
-</script>
 
 <!-- HTML导出PDF代码 -->
 <script src="./js/main/jspdf.debug.js"></script>
 <script src="./js/main/html2canvas.js"></script>
-<!--<script type="text/javascript">
-	//see http://blog.csdn.net/pwc1996/article/details/56675541
-
-	document.getElementById("html2canvas").onclick = function() {
-
-		// 将 id 为 content 的 div 渲染成 canvas
-		html2canvas(document.getElementById("content"), {
-
-			// 渲染完成时调用，获得 canvas
-			onrendered: function(canvas) {
-
-				// 从 canvas 提取图片数据
-				var imgData = canvas.toDataURL('image/jpeg');
-
-				var doc = new jsPDF("p", "mm", "a4");
-				//                               |
-				// |—————————————————————————————|
-				// A0 841×1189
-				// A1 594×841
-				// A2 420×594
-				// A3 297×420
-				// A4 210×297
-				// A5 148×210
-				// A6 105×148
-				// A7 74×105
-				// A8 52×74
-				// A9 37×52
-				// A10 26×37
-				//     |——|———————————————————————————|
-				//                                 |——|——|
-				//                                 |     |
-				doc.addImage(imgData, 'JPEG', 0, 0, 210, 297);
-
-				doc.save('content.pdf');
-			}
-		});
-
-	}
-
-</script>-->
 
 <!-- 简历填写提示 jquery toast -->
 <script src="js/main/jquery.toast.js"></script>

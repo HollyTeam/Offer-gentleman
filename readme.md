@@ -39,7 +39,7 @@
 	   		grade: Number,
 	   		honors: String,		
 	   		related_course: String
-   	}
+   	    }
 	]
 
 
@@ -97,4 +97,8 @@
 
 //头像图片以二进制形式分开传输
 路径：'POST /main/avatar'
+
+//预览图以二进制形式分开传输
+路径：'POST /main/preview'
+格式：preImgData: data:image/jpeg;base64
 ```

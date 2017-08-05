@@ -48,7 +48,7 @@ $(document).ready(function(){
             $('.warn-border').on('click',function(evt){
                 $(this).removeClass('warn-border');
             });
-            return;
+            return false;
         }
         if(resume.address === ''){
             toastWarning('请填写地址');
@@ -56,7 +56,7 @@ $(document).ready(function(){
             $('.warn-border').on('click',function(evt){
                 $(this).removeClass('warn-border');
             });
-            return;
+            return false;
         }
         if(!Util.isTel(resume.phone)){
             toastWarning('电话格式有误');
@@ -64,7 +64,7 @@ $(document).ready(function(){
             $('.warn-border').on('click',function(evt){
                 $(this).removeClass('warn-border');
             });
-            return;
+            return false;
         }
         if(!Util.isMail(resume.mail)){
             toastWarning('邮箱格式有误');
@@ -72,7 +72,7 @@ $(document).ready(function(){
             $('.warn-border').on('click',function(evt){
                 $(this).removeClass('warn-border');
             });
-            return;
+            return false;
         }
 
         //教育背景

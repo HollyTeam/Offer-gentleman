@@ -81,7 +81,6 @@
      * @see function checkRes can be found in check.js
      */
     var formsubmit = function (r) {
-        //alert('提交了表单');
         resume.saveResume(r);
         Avatar.saveImage();
     }
@@ -92,8 +91,6 @@
             _self.setResume();
             //String 转 JSON
             var r = JSON.parse(_self.getResume());
-            //alert(r.name);
-            formsubmit = formsubmit.before(checkRes);
             formsubmit(r);
         });
 
@@ -102,6 +99,7 @@
         $('#html2canvas').on('click', function () {
             _self.setResume();
             var r = JSON.parse(_self.getResume());
+            download = download.before(checkRes);
             download(r);
         });
 
@@ -411,6 +409,28 @@
             url: '/main',
             type: 'post',
             data: data,
+            success: function () {
+
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+        //上传缩率图
+        var preImgData;
+        // 将 id 为 content 的 div 渲染成 canvas
+        html2canvas(document.getElementById("content"), {
+
+            // 渲染完成时调用，获得 canvas
+            onrendered: function(canvas) {
+                // 从 canvas 提取图片数据
+                preImgData = canvas.toDataURL('image/jpeg');
+            }
+        });
+        $.ajax({
+            url: '/main/preview',
+            type: 'post',
+            data: preImgData,
             success: function () {
 
             },
