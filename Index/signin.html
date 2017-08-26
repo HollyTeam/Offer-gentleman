@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>登录</title>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/sign/signin.js"></script>
+    </head>
+    <body>
+        <div class="signup-form ">
+    		<div class="signup-form__logo-box">
+    			<div class="signup-form__logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+    			<div class="signup-form__catchphrase">专业的求职助手</div>
+    		</div>
+    		<div id="container-login">
+    			<div data-reactroot="">
+    				<span>
+    					<form onsubmit="return false">
+    						<div class="input-field-group">
+    							<div class="input-field">
+    								<input class="mail" placeholder="邮箱" autocapitalize="on" type="text">
+    							</div>
+    							<div class="input-field">
+    								<input class="password" placeholder="密码" autocapitalize="off" type="password">
+    							</div>
+    						</div>
+    						<ul class="error-msg-list">
+    							<li id="wrong-msg" class="error-msg-list__item" style="display: none;"></li>
+    						</ul>
+
+    						<button id="button" class="signin signup-form__submit" style="margin-top:30px">登录</button>
+    						<a href="signup.html" class="signup signup-form__submit">没有账号</a>
+    						<div class="signup-form-nav">
+    							<div class="left"></div>
+    							<div class="right">
+    								<a href="/reminder" target="_blank">忘记了</a>
+    							</div>
+    						</div>
+    					</form>
+    				</span>
+    			</div>
+    		</div>
+
+    	</div>
+    </body>
+
+    <link rel="stylesheet" type="text/css" href="css/sign/signin.css" >
+</html>
