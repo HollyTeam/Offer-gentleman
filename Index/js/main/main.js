@@ -412,7 +412,10 @@
             url: '/studentcenter/saveresume',
             type: 'post',
             data: {
-                "content":data
+                "data":{
+                    "resumeId":resumeId,
+                    "content":data
+                }
             },
             success: function () {
 
@@ -886,17 +889,26 @@ function getUrlParameter(name) {
  * @author:Huang Zhenyang
  * 获取简历信息
  * */
+let resumeId = null;
 function getData() {
-   // let resumeId = getUrlParameter('id') ||;
-
+    resumeId = getUrlParameter("id");
+    if(resumeId === null){
+        resumeId = "-1";
+    }
     $.ajax({
-
         url: '/studentcenter/showresume',
-        type: 'get',
+        type: 'post',
         dataType: 'json',
+        data:{
+            "resumeId": parseInt(resumeId)
+        }
     }).done(function (data) {
         console.log(JSON.stringify(data));
-        setData(data);
+        if(resumeId === "-1"){
+            resumeId = data.resumeId;
+        }else if(resumeId !== "-1"){
+            setData(data);
+        }
     }).fail(function (xhr, status) {
 
     });
