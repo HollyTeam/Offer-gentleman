@@ -23,14 +23,17 @@ $(document).ready(function(){
 		
 		$.ajax({
 			type:'post',
-			url:'/signin',
+			url:'/signin.do',
 			data:{
 				mail:mail,
 				password:password
 			},
 			success:function(data){
-				if(data === 'wrongPw'){
-					showWrongMsg('密码不正确');
+				if(data.result === "true"){
+					// showWrongMsg('密码不正确');
+					window.location.href = "resumes.html";
+				}else if(data.result === "false"){
+					showWrongMsg("登录失败");
 				}
 			},
 

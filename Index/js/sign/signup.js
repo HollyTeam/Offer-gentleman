@@ -47,7 +47,7 @@ $(document).ready(function(){
 	//得到验证码
 	$('.getIdentify').on('click',function(evt){
 	    //手机号码检测
-	    var mail = $('.mail').val().trim();
+	    var mail = $('.mail').val();
 	    if(!isMail(mail)){
 	    	evt.preventDefault();
 	    	showWrongMsg('邮箱格式不规范');
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 	$('.signup').on('click',function(evt){
 		//邮箱检测
-		var mail = $('.mail').val().trim();
+		var mail = $('.mail').val();
 		if(!isMail(mail)){
 		 	evt.preventDefault();
 		 	//$('#mail-wrong').slideDown();
@@ -82,7 +82,7 @@ $(document).ready(function(){
 		 	return;
 	 	}
 		//密码检测
-		var password = $('.password').val().trim();
+		var password = $('.password').val();
 		if(!isPassword(password)){
 			evt.preventDefault();
 			//$('#pw-wrong').slideDown();
@@ -91,7 +91,7 @@ $(document).ready(function(){
 		}
 
 	    //验证码检测
-	    var code = $('.identify').val().trim();
+	    var code = $('.identify').val();
 	    if(code === ''){
 	    	evt.preventDefault();
 	    	//$('#iden-wrong').slideDown();
@@ -101,17 +101,30 @@ $(document).ready(function(){
 
 	    evt.preventDefault();
 
+
+
+	    /*
+	    * 注册ajax
+	    * */
+	    let userName = $('#userName').val();
 	    //向服务器发送ajax请求
 	    $.ajax({
 	    	type:'post',
-	    	url:"/signup",
+	    	url:"/signup.do",
+			dataType:"json",
 	    	data:{
+	    		userName:userName,
 	    		password:password,
 	    		mail:mail,
-	    		code:code,
 	    	},
 	    	success:function(data){
-	  			
+	  			if(data.result === "true"){
+					window.location.href = "resumes.html";
+				}else if(data.result === "netfalse"){
+                    showWrongMsg("网络异常");
+				}else if(data.result === "exist"){
+					showWrongMsg("已经被注册");
+				}
 	    	},
 	    	error:function(err){
 	    		console.log("error...");

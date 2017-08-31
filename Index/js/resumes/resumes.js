@@ -14,7 +14,7 @@ $(document).ready(function () {
  * */
 function getData() {
     $.ajax({
-        url: '/test',
+        url: '/roughInfo.do',
         type: 'get',
         dataType: 'json'
     }).done(function (recvData) {
@@ -32,7 +32,7 @@ function getData() {
 function setData(recvData) {
     let data = recvData.data;
     let imgUrl = "";
-    let resumeHref = "";
+    let resumeHref = ""; //id
     let resumeTitle = "";
     let completeTime = "";
 
@@ -48,6 +48,9 @@ function setData(recvData) {
             imgUrl = data[i].imgUrl;
             resumeHref = data[i].resumeHref;
             resumeTitle = data[i].resumeTitle;
+            if(resumeTitle === null){
+                resumeTitle = "未命名";
+            }
             completeTime = data[i].completeTime;
 
             eachDom = '<div class="img" style="width:20%;margin-left: 15px;margin-right:20px;" >' +
@@ -71,6 +74,9 @@ function setData(recvData) {
             imgUrl = data[i].imgUrl;
             resumeHref = data[i].resumeHref;
             resumeTitle = data[i].resumeTitle;
+            if(resumeTitle === null){
+                resumeTitle = "未命名";
+            }
             completeTime = data[i].completeTime;
 
             eachDom = '<div class="img" style="width:20%;margin-left: 15px;margin-right:20px;" >' +
@@ -103,6 +109,9 @@ function setData(recvData) {
             imgUrl = data[i].imgUrl;
             resumeHref = data[i].resumeHref;
             resumeTitle = data[i].resumeTitle;
+            if(resumeTitle === null){
+                resumeTitle = "未命名";
+            }
             completeTime = data[i].completeTime;
 
             eachDom = '<div class="img" style="'+firstStyle+'">' +

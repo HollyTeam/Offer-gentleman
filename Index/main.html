@@ -127,7 +127,6 @@
 -->
 
 				<div class="col-xs-12 text-right">
-					<input id="resumeTitle" placeholder="输入简历名称"/>
 					<button id="saveResume" type="button" class="btn btn-info"><img src="images/main/save.png">保存</button>
 					<button id="html2canvas" type="button" class="btn btn-info"><img src="images/main/download.png">下载</button>
 					<a target="_blank" href="#">
@@ -533,20 +532,32 @@
 
 	<!--end-footer-->
 
+	<!-- Modal -->
+	<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">为你的简历起个名字吧</h4>
+				</div>
+				<div class="modal-body">
+					<div class="content">
+						<input class="form-control" id="resumeTitle" />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="submit form-group" style="text-align: center;margin-bottom: 15px;">
+						<input onclick="saveResumeTitle()" type="submit" class="ant-btn ant-btn-primary"
+							   data-reactid="403" value="提交"><br>
+						<label><span id="saveTip" style="color:red;"></span></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal -->
 
-	<!--
-<div class="my-elevator">
-<div class="code text-center">
-<div class="codeimg">
-<img class="coding" src="..http://www.xiaozao.org/static/imgs/brochure/brochure_erwei.jpg" />
-<div>扫一扫</div>
-<div>在手机上看课、投职位</div>
-</div>
-</div>
-<a class="advice" target="_blank" href="http://cn.mikecrm.com/BFcwUFk"></a>
-<button id="gotop" class="totop"></button>
-</div>
--->
+
 	<script>
 		M.isl = 'true' == 'true';
 

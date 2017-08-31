@@ -20,21 +20,19 @@
                         <form onsubmit="return false">
                             <div class="input-field-group">
                                 <div class="input-field">
+                                    <input id="userName" placeholder="用户名" autocapitalize="on" type="text">
+                                </div>
+                                <div class="input-field">
                                     <input class="mail" placeholder="邮箱" autocapitalize="on" type="text">
                                 </div>
                                 <div class="input-field">
                                     <input class="password" placeholder="密码，6-16个字符组成，区分大小写" autocapitalize="off" type="password">
                                 </div>
-                                <div class="input-field">
-                                    <input class="identify" placeholder="请输入验证码" disabled="true" autocapitalize="off" type="text">
-                                </div>
                             </div>
                             <ul class="error-msg-list">
                                 <li id="wrong-msg" class="error-msg-list__item" style="display: none;"></li>
                             </ul>
-
                             <button id="signup" class="signup signup-form__submit">注册</button>
-                            <button class="getIdentify signup-form__submit">获取验证码</button>
                             <div class="signup-form-nav" style="margin-top:30px">
                                 <div style="float:left">
                                     <a href="signin.html">已有账号</a>

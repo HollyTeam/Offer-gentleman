@@ -122,9 +122,12 @@
                     var dd = {
                         content: [
                             {
-                                text: r.name ||'黄振洋',
+                                text: r.name || '黄振洋',
                                 style: 'per_info_header'
-                            }, {text: [r.address||'四川省成都市双流县666号' + "   ", r.phone||'17760471603' + "   ", r.mail||'745125931@qq.com' + "   "], style: 'text_center'},
+                            }, {
+                                text: [r.address || '四川省成都市双流县666号' + "   ", r.phone || '17760471603' + "   ", r.mail || '745125931@qq.com' + "   "],
+                                style: 'text_center'
+                            },
                             /*{text: '教育背景'},
                              {canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]},
 
@@ -164,7 +167,7 @@
                                 {
                                     // percentage width
                                     width: 'auto',
-                                    text:[i.city || '成都'+",   ", i.province || '四川'],style:'text_right'
+                                    text: [i.city || '成都' + ",   ", i.province || '四川'], style: 'text_right'
                                 }
                             ],
                             // optional space between columns
@@ -181,7 +184,7 @@
                                 {
                                     // percentage width
                                     width: 'auto',
-                                    text:[i.end_time || '2019.6'],style:'text_right'
+                                    text: [i.end_time || '2019.6'], style: 'text_right'
                                 }
                             ],
                             // optional space between columns
@@ -207,7 +210,7 @@
                                 {
                                     // percentage width
                                     width: 'auto',
-                                    text:[i.city || '成都'+",   ", i.province || '四川'],style:'text_right'
+                                    text: [i.city || '成都' + ",   ", i.province || '四川'], style: 'text_right'
                                 }
                             ],
                             // optional space between columns
@@ -225,21 +228,22 @@
                                 {
                                     // percentage width
                                     width: 'auto',
-                                    text:[i.start_time || '2015.6'+" - ", " - ",i.end_time || '2015.8'],style:'text_right'
+                                    text: [i.start_time || '2015.6' + " - ", " - ", i.end_time || '2015.8'],
+                                    style: 'text_right'
                                 }
                             ],
                             // optional space between columns
                             columnGap: 10
                         });
                         dd.content.push({ul: [i.sentence_1 || '负责UI设计以及前后端通信', i.sentence_2 || '负责系统架构以及任务分配', i.sentence_3 || '带领EF团队做完淘宝项目，实现每个月50%的增值', i.sentence_4 || '获得阿里妈妈最佳新人奖']});
-                        dd.content.push({text:'   '});
+                        dd.content.push({text: '   '});
 
                     });
 
                     //领导经验
                     dd.content.push({text: '领导经验'});
                     dd.content.push({canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]});
-                        //学生社团
+                    //学生社团
                     r.leader.organization.forEach(function (i) {
                         dd.content.push({
                             columns: [
@@ -247,21 +251,22 @@
                                     // star-sized columns fill the remaining space
                                     // if there's more than one star-column, available width is divided equally
                                     width: '*',
-                                    text: [i.name || '三次元社',i.position||'会长']
+                                    text: [i.name || '三次元社', i.position || '会长']
                                 },
                                 {
                                     // percentage width
                                     width: 'auto',
-                                    text:[i.start_time || '2015.2'+" - ", " - ", i.end_time || '2016.2'],style:'text_right'
+                                    text: [i.start_time || '2015.2' + " - ", " - ", i.end_time || '2016.2'],
+                                    style: 'text_right'
                                 }
                             ],
                             // optional space between columns
                             columnGap: 10
                         });
                         dd.content.push({ul: [i.sentence_1 || '在三次元驰骋', i.sentence_2 || '在三次元浪的飞起', i.sentence_3 || '三次元异世界']});
-                        dd.content.push({text:'   '});
+                        dd.content.push({text: '   '});
                     });
-                        //学生俱乐部
+                    //学生俱乐部
                     r.leader.club.forEach(function (i) {
                         dd.content.push({
                             columns: [
@@ -269,29 +274,28 @@
                                     // star-sized columns fill the remaining space
                                     // if there's more than one star-column, available width is divided equally
                                     width: '*',
-                                    text: [i.name || '乒乓球俱乐部',i.position||'部长']
+                                    text: [i.name || '乒乓球俱乐部', i.position || '部长']
                                 },
                                 {
                                     // percentage width
                                     width: 'auto',
-                                    text:[i.start_time || '2015.2'+" - "," - ", i.end_time || '2016.2'],style:'text_right'
+                                    text: [i.start_time || '2015.2' + " - ", " - ", i.end_time || '2016.2'],
+                                    style: 'text_right'
                                 }
                             ],
                             // optional space between columns
                             columnGap: 10
                         });
                         dd.content.push({ul: [i.sentence_1 || '带领部员打进全国总决赛', i.sentence_2 || '获得第一名，与马琳握手']});
-                        dd.content.push({text:'   '});
+                        dd.content.push({text: '   '});
                     });
 
                     //技能&兴趣
                     dd.content.push({text: '技能&兴趣'});
                     dd.content.push({canvas: [{type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1}]});
-                    dd.content.push({text:['语言',r.skill.language||'德语,法语']});
-                    dd.content.push({text:['计算机',r.skill.computer||'熟悉java']});
-                    dd.content.push({text:['兴趣爱好',r.skill.hobby||'游泳']});
-
-
+                    dd.content.push({text: ['语言', r.skill.language || '德语,法语']});
+                    dd.content.push({text: ['计算机', r.skill.computer || '熟悉java']});
+                    dd.content.push({text: ['兴趣爱好', r.skill.hobby || '游泳']});
 
 
                     //设置字体
@@ -309,7 +313,11 @@
                             bolditalics: 'STSONG.ttf',
                         }
                     };
-                    pdfMake.createPdf(dd).download("test.pdf");
+                    if (resumeTitle !== null) {
+                        pdfMake.createPdf(dd).download(resumeTitle + ".pdf");
+                    }else{
+                        $('#myModal').modal('show');
+                    }
                 }
             });
         }
@@ -327,29 +335,29 @@
 
         this.name = $('div.name').html() || '何干事'; //pass
         //alert('name: '+this.name);
-        this.address = $('div.address').html()|| '西南地区'; //pass
+        this.address = $('div.address').html() || '西南地区'; //pass
 
-        this.phone = $('div.phone').html()|| '8008208820'; //pass
+        this.phone = $('div.phone').html() || '8008208820'; //pass
 
-        this.mail = $('div.mail').html()|| '555555@qq.com'; //pass
+        this.mail = $('div.mail').html() || '555555@qq.com'; //pass
 
-        this.skill.language = $('div.language').html()|| '汉语'; //pass
+        this.skill.language = $('div.language').html() || '汉语'; //pass
 
-        this.skill.computer = $('div.computer').html()|| '熟悉java'; //pass
+        this.skill.computer = $('div.computer').html() || '熟悉java'; //pass
 
-        this.skill.hobby = $('div.hobby').html()|| '看直播'; //pass
+        this.skill.hobby = $('div.hobby').html() || '看直播'; //pass
 
         //pass
         $('.parent-edu').children('.add-blank').each(function (edu) {
             var _edu = {};
-            _edu.school = $(this).find('div.school').html()|| '四川大学'; //pass
-            _edu.city = $(this).find('div.city').html()|| '曲靖'; //pass
-            _edu.province = $(this).find('div.province').html()|| '云南'; //pass
-            _edu.college = $(this).find('div.college').html()|| '软件工程'; //pass
-            _edu.end_time = $(this).find('div.end-time').html()|| '2017-06-09'; //pass
-            _edu.grade = $(this).find('div.grade').html()|| '4'; //pass
-            _edu.honors = $(this).find('div.honors').html()|| '西南地区第一ADC'; //字数大于3会出现br标签
-            _edu.related_course = $(this).find('div.related_course').html()|| '如何走A'; //字数大于3会出现br标签
+            _edu.school = $(this).find('div.school').html() || '四川大学'; //pass
+            _edu.city = $(this).find('div.city').html() || '曲靖'; //pass
+            _edu.province = $(this).find('div.province').html() || '云南'; //pass
+            _edu.college = $(this).find('div.college').html() || '软件工程'; //pass
+            _edu.end_time = $(this).find('div.end-time').html() || '2017-06-09'; //pass
+            _edu.grade = $(this).find('div.grade').html() || '4'; //pass
+            _edu.honors = $(this).find('div.honors').html() || '西南地区第一ADC'; //字数大于3会出现br标签
+            _edu.related_course = $(this).find('div.related_course').html() || '如何走A'; //字数大于3会出现br标签
             _self.edus.push(_edu);
         })
         //alert(JSON.stringify(this.edus));
@@ -360,42 +368,42 @@
                 return;
             }
             var _work = {};
-            _work.company = $(this).find('div.company').html()|| '阿里妈妈';
-            _work.city = $(this).find('div.city').html()|| '杭州';
-            _work.province = $(this).find('div.province').html()|| '浙江';
-            _work.position = $(this).find('div.position').html()|| '总监';
-            _work.project = $(this).find('div.project').html()|| '淘宝';
-            _work.start_time = $(this).find('div.start_time').html()|| '2015-06-06';
-            _work.end_time = $(this).find('div.end_time').html()|| '2016-06-06';
-            _work.sentence_1 = $(this).find('div.sentence_1').html()|| '负责运营';
-            _work.sentence_2 = $(this).find('div.sentence_2').html()|| '负责设计';
-            _work.sentence_3 = $(this).find('div.sentence_3').html()|| '带领团队实现胜利';
-            _work.sentence_4 = $(this).find('div.sentence_4').html()|| '每个月50%产值增加';
+            _work.company = $(this).find('div.company').html() || '阿里妈妈';
+            _work.city = $(this).find('div.city').html() || '杭州';
+            _work.province = $(this).find('div.province').html() || '浙江';
+            _work.position = $(this).find('div.position').html() || '总监';
+            _work.project = $(this).find('div.project').html() || '淘宝';
+            _work.start_time = $(this).find('div.start_time').html() || '2015-06-06';
+            _work.end_time = $(this).find('div.end_time').html() || '2016-06-06';
+            _work.sentence_1 = $(this).find('div.sentence_1').html() || '负责运营';
+            _work.sentence_2 = $(this).find('div.sentence_2').html() || '负责设计';
+            _work.sentence_3 = $(this).find('div.sentence_3').html() || '带领团队实现胜利';
+            _work.sentence_4 = $(this).find('div.sentence_4').html() || '每个月50%产值增加';
             _self.works.push(_work);
         });
         //alert(JSON.stringify(_self.works));
         //pass
         $('.leader').children('div.organization').each(function (org) {
             var _organization = {};
-            _organization.name = $(this).find('div.name').html()|| '戏剧社';
-            _organization.position = $(this).find('div.position').html()|| '社长';
-            _organization.start_time = $(this).find('div.start_time').html()|| '2015-03-02';
-            _organization.end_time = $(this).find('div.end_time').html()|| '2015-09-09';
-            _organization.sentence_1 = $(this).find('div.sentence_1').html()|| '表演话剧';
-            _organization.sentence_2 = $(this).find('div.sentence_2').html()|| '带领大家走向全国大赛';
-            _organization.sentence_3 = $(this).find('div.sentence_3').html()|| '第一名';
+            _organization.name = $(this).find('div.name').html() || '戏剧社';
+            _organization.position = $(this).find('div.position').html() || '社长';
+            _organization.start_time = $(this).find('div.start_time').html() || '2015-03-02';
+            _organization.end_time = $(this).find('div.end_time').html() || '2015-09-09';
+            _organization.sentence_1 = $(this).find('div.sentence_1').html() || '表演话剧';
+            _organization.sentence_2 = $(this).find('div.sentence_2').html() || '带领大家走向全国大赛';
+            _organization.sentence_3 = $(this).find('div.sentence_3').html() || '第一名';
             _self.leader.organization.push(_organization);
         })
         //alert(JSON.stringify(this.leader.organization));
         //pass
         $('.leader').children('div.club').each(function (clu) {
             var _club = {};
-            _club.name = $(this).find('div.name').html()|| '嗨爆俱乐部';
-            _club.position = $(this).find('div.position').html()|| '部长';
-            _club.start_time = $(this).find('div.start_time').html()|| '2015-03-03';
-            _club.end_time = $(this).find('div.end_time').html()|| '2015-09-09';
-            _club.sentence_1 = $(this).find('div.sentence_1').html()|| '俱乐部';
-            _club.sentence_2 = $(this).find('div.sentence_2').html()|| '很好';
+            _club.name = $(this).find('div.name').html() || '嗨爆俱乐部';
+            _club.position = $(this).find('div.position').html() || '部长';
+            _club.start_time = $(this).find('div.start_time').html() || '2015-03-03';
+            _club.end_time = $(this).find('div.end_time').html() || '2015-09-09';
+            _club.sentence_1 = $(this).find('div.sentence_1').html() || '俱乐部';
+            _club.sentence_2 = $(this).find('div.sentence_2').html() || '很好';
             _self.leader.club.push(_club);
         })
         //alert(JSON.stringify(this.leader.club));
@@ -408,22 +416,26 @@
     Resume.prototype.saveResume = function (INSTANCE) {
         var data = INSTANCE;
         data = JSON.stringify(data);
-        $.ajax({
-            url: '/studentcenter/saveresume',
-            type: 'post',
-            data: {
-                "data":{
-                    "resumeId":resumeId,
-                    "content":data
-                }
-            },
-            success: function () {
+        if(resumeTitle === null){ //如果简历名为空，弹出提示框让他填
+            $('#myModal').modal('show');
+        }else{
+            $.ajax({
+                url: '/main.do',
+                type: 'post',
+                data: {
+                    "resumeId": resumeId,
+                    "resumeTitle": resumeTitle,
+                    "content": data
+                },
+                success: function () {
 
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        })
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+
     }
 
 
@@ -553,7 +565,7 @@
 //个人信息
 $('.resume-uname').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(个人信息)',
+        heading: '<strong>offer先生小贴士</strong>(个人信息)',
         text: ['只需要 姓名 住址 电话 邮箱，其他都不需要，除了有的要特殊要求附上照片'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -569,7 +581,7 @@ $('.resume-uname').on('click', function () {
 //地址
 $('.address').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(个人信息)',
+        heading: '<strong>offer先生小贴士</strong>(个人信息)',
         text: ['地址无明确要求的情况下写现住址到街道级就好，如四川省成都市高新区益州大道'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -586,7 +598,7 @@ $('.address').on('click', function () {
 //电话
 $('.phone').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(个人信息)',
+        heading: '<strong>offer先生小贴士</strong>(个人信息)',
         text: ['电话号码格式为 131-xxxx-xxxx'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -602,7 +614,7 @@ $('.phone').on('click', function () {
 //邮箱地址
 $('.mail').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(个人信息)',
+        heading: '<strong>offer先生小贴士</strong>(个人信息)',
         text: ['邮箱建议不要用 QQ 邮箱，QQ 邮箱给人感觉很娱乐化，最好开通一个专门找工作的号，可以用 Foxmail/Gmail 正式一点的邮箱，邮箱地址推荐使用自己的名称相关的,例如:Xiaoer.Wang@foxmail.com 这样你发送邮件过去 HR 会在几千封邮件里一眼锁定你的邮件'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -619,7 +631,7 @@ $('.mail').on('click', function () {
 //                       教育背景
 $('#edu-background-title').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(教育背景)',
+        heading: '<strong>offer先生小贴士</strong>(教育背景)',
         text: ['教育经历按照时间倒叙依次填写，时间最近的放在第一栏'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -635,7 +647,7 @@ $('#edu-background-title').on('click', function () {
 //相关课程
 $('.related_course').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(教育背景)',
+        heading: '<strong>offer先生小贴士</strong>(教育背景)',
         text: ['相关课程不要把所学的所有课程写上，写和岗位需求和岗位职能相关的课程，例：应聘设计 就要写 CAD PS 等，做贷款类就写风控相关'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -652,7 +664,7 @@ $('.related_course').on('click', function () {
 //                      工作经历
 $('#work-experience-title').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(工作经历)',
+        heading: '<strong>offer先生小贴士</strong>(工作经历)',
         text: ['按照时间倒叙的方式来写工作履历，时间最近的放在最开头'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -668,7 +680,7 @@ $('#work-experience-title').on('click', function () {
 //工作经验描述
 $('.parent-experience-wdesc').find('.sentence_1').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(工作经历)①',
+        heading: '<strong>offer先生小贴士</strong>(工作经历)①',
         text: ['在写每一个 bullet point 的时候必须借助数据来量化你所做事情的成果，学会用数据化的语言描述内容。必须清楚你想要的每个点表达了什么特质或者素质。不要写了 3 点都是一个意思。列如：做了什么事使得公司销售额达到 100 万等/我服务了 300+客户/我审计了一个$500m 的公司等'],
         icon: 'info',
         showHideTransition: 'plain', //fade,slide,plain
@@ -682,7 +694,7 @@ $('.parent-experience-wdesc').find('.sentence_1').on('click', function () {
 
 $('.parent-experience-wdesc').find('.sentence_2').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(工作经历)②',
+        heading: '<strong>offer先生小贴士</strong>(工作经历)②',
         text: ['写每一个 bullet point 的时候最好以动词开头，尽量按照 STAR 原则来描述每一个经历即Situation（情况）、Task（任务）、Action（行动）、Result（结果）比如作为某活动的负责人需要为公司做拉新活动，在一个月内，带领一个 5 个人的团队，通过 xxx 方法，取得了10000+新增的成绩'],
         icon: 'info',
         showHideTransition: 'slide', //fade,slide,plain
@@ -696,7 +708,7 @@ $('.parent-experience-wdesc').find('.sentence_2').on('click', function () {
 
 $('.parent-experience-wdesc').find('.sentence_3').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(工作经历)③',
+        heading: '<strong>offer先生小贴士</strong>(工作经历)③',
         text: ['在每一个 bullet point 中要尽量包含或者展现 key words，因为越是针对性强的简历越是容易受到认可，甚至大公司直接采用机器筛选简历，如果你的简历中包含他们设置的关键词才能有机会被 HR 看到，否则直接 PASS，所以我们必须学会提炼出 JD 里面的 Key word。每个岗位都有自己对技能的关键词，如 Consulting 需要 Market research;Financial industry 的需要 Analytical skill'],
         icon: 'info',
         showHideTransition: 'fade', //fade,slide,plain
@@ -711,7 +723,7 @@ $('.parent-experience-wdesc').find('.sentence_3').on('click', function () {
 //                          领导经验
 $('.leader').find('h4').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(领导经验)',
+        heading: '<strong>offer先生小贴士</strong>(领导经验)',
         text: ['挑选能够体现个人能力的实践经历，可以是学校社团工作、校内比赛和活动、校外兼职经历，也是按照 STAR+量化成果的方式去写',
             '如果有正式工作经验和实习那么可以将实习放在社会实践栏和社团放在一起，如果没有正式工作，则将实习经历放在工作经验栏',
             '实践的内容最好也是和求职岗位需求相关的'],
@@ -731,7 +743,7 @@ $('.leader').find('h4').on('click', function () {
 //语言
 $('.skill').find('.language').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(技能&兴趣)',
+        heading: '<strong>offer先生小贴士</strong>(技能&兴趣)',
         text: ['语言栏建议填写掌握的语言和熟练程度（以证书或分数证明），如 英语（熟练，CET-6 640 分）；法语（熟练）'],
         icon: 'info',
         showHideTransition: 'fade', //fade,slide,plain
@@ -746,7 +758,7 @@ $('.skill').find('.language').on('click', function () {
 //技能
 $('.skill').find('.computer').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(技能&兴趣)',
+        heading: '<strong>offer先生小贴士</strong>(技能&兴趣)',
         text: ['技能栏建议填写与所申请岗位相关的技能，有的时候 JD 里面会明确要求。列如互联网运营类工作可能涉及 PS 熟练、Xmind 精通'],
         icon: 'info',
         showHideTransition: 'fade', //fade,slide,plain
@@ -761,7 +773,7 @@ $('.skill').find('.computer').on('click', function () {
 //兴趣
 $('.skill').find('.hobby').on('click', function () {
     $.toast({
-        heading: '<strong>jobbridge小贴士</strong>(技能&兴趣)',
+        heading: '<strong>offer先生小贴士</strong>(技能&兴趣)',
         text: ['兴趣栏也是写和职位技能素养需求相关的，并尽量量化。比如你应聘体育类工作，你可以写你喜欢运动，跑过几个城市的马拉松'],
         icon: 'info',
         showHideTransition: 'fade', //fade,slide,plain
@@ -857,18 +869,12 @@ $('.leader').find('.club').find('div.oper').find('a.add').on('click', function (
 });
 
 
-
-
-
-
-
-
-
 /**
  * Created by huangzhenyang on 2017/7/27.
  */
 
 $(document).ready(function () {
+    // 简历数据预处理
     getData();
 });
 
@@ -890,23 +896,26 @@ function getUrlParameter(name) {
  * 获取简历信息
  * */
 let resumeId = null;
+let resumeTitle = null;
+
 function getData() {
     resumeId = getUrlParameter("id");
-    if(resumeId === null){
+    if (resumeId === null) {
         resumeId = "-1";
+        $('#myModal').modal('show');
     }
     $.ajax({
-        url: '/studentcenter/showresume',
+        url: '/showresume.do',
         type: 'post',
         dataType: 'json',
-        data:{
+        data: {
             "resumeId": parseInt(resumeId)
         }
     }).done(function (data) {
         console.log(JSON.stringify(data));
-        if(resumeId === "-1"){
+        if (resumeId === "-1") {
             resumeId = data.resumeId;
-        }else if(resumeId !== "-1"){
+        } else if (resumeId !== "-1") {
             setData(data);
         }
     }).fail(function (xhr, status) {
@@ -919,7 +928,11 @@ function getData() {
  * @author:Huang Zhenyang
  * 填充简历信息
  * */
-function setData(data) {
+function setData(initData) {
+    console.log(typeof (initData));
+    initData = JSON.parse(initData);
+    resumeTitle = initData.resumeTitle;
+    let data = initData.data;
     //个人信息
     let perInfo_name = data.name;
     let perInfo_address = data.address;
@@ -1144,7 +1157,33 @@ function insertIntoClub(club) {
 }
 
 
+/*
+ * @author: Huang Zhenyang
+ * 保存简历名字
+ * */
+function saveResumeTitle() {
+    resumeTitle = $('#resumeTitle').val();
+    if (resumeTitle.trim() === '') {
+        toastWarning("请输入简历的名字");
+    } else {
+        $('#myModal').modal('hide');
+    }
+
+}
 
 
+let toastWarning = function () {
+    let args = Array.prototype.slice.call(arguments);
 
-
+    $.toast({
+        heading: '<strong>提醒</strong>',
+        text: args,
+        icon: 'warning',
+        showHideTransition: 'fade', //fade,slide,plain
+        hideAfter: 60000, //false
+        stack: 1, //the max number of toast, or false == 1
+        position: 'bottom-right',
+        loader: true,
+        loaderBg: '#09b3ba'
+    });
+}
