@@ -92,7 +92,7 @@ $youziku.draw(); </script>
                     </div>
                     -->
                     <div style="display:block">
-                        <a href="signin.html">
+                        <!--<a href="signin.html">
                         <p style="display:inline-block;margin-top:10px;color:white">登录</p>
                         </a>
                         <a href="#">
@@ -100,7 +100,8 @@ $youziku.draw(); </script>
                         </a>
                         <a href="signup.html">
                         <p style="display:inline-block;margin-top:10px;color:white">注册</p>
-                        </a>
+                        </a>-->
+                        <p id="userName" style="display:inline-block;margin-top:10px;color:white">{{message}}</p>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -195,14 +196,12 @@ $youziku.draw(); </script>
     <div class="container">
         <div class="footer-main">
             <div class="col-md-6 footer-left">
-                <a href="index.html"><h3>About`Us</h3></a>
-                <p>Address:<span>SiChuan University,</span>
-                    <span>Offer-gentleman</span></p>
+                    <span>Powered by offer先生</span></p>
             </div>
             <div class="col-md-6 footer-right">
                 <p>联系我们</p>
                 <div class="ftr">
-                    <label>+8 (800) 555-555-55</label>
+                    <label>028-67878695</label>
                     <ul>
                         <li><a href="#"><span class="sky"> </span></a></li>
                         <li><a href="#"><span class="twit"> </span></a></li>
@@ -275,6 +274,9 @@ $youziku.draw(); </script>
         }
     });
 </script>-->
+
+<!--vue-->
+<script src="https://unpkg.com/vue"></script>
 
 <script type="text/javascript" src="js/resumes/resumes.js"></script>
 
@@ -365,6 +367,17 @@ $youziku.draw(); </script>
     Mock.mock('/test', data);
 </script>-->
 <!--测试-->
+
+
+<!--测试-->
+<!--<script src="http://mockjs.com/dist/mock.js"></script>
+<script type="text/javascript">
+    var data ={
+        "userName":"hhh"
+    };
+    Mock.mock('/getUserName.do', data);
+</script>
+&lt;!&ndash;测试&ndash;&gt;-->
 
 </body>
 

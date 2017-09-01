@@ -34,6 +34,8 @@ $(document).ready(function(){
 					window.location.href = "resumes.html";
 				}else if(data.result === "false"){
 					showWrongMsg("登录失败");
+				}else if(data.result === "noUser"){
+					showWrongMsg("用户不存在");
 				}
 			},
 

@@ -427,8 +427,10 @@
                     "resumeTitle": resumeTitle,
                     "content": data
                 },
-                success: function () {
-
+                success: function (data) {
+                    if(data.result === "true"){
+                        alert("保存成功");
+                    }
                 },
                 error: function (err) {
                     console.log(err);
@@ -876,6 +878,8 @@ $('.leader').find('.club').find('div.oper').find('a.add').on('click', function (
 $(document).ready(function () {
     // 简历数据预处理
     getData();
+    // 获取用户名
+    getUserName();
 });
 
 
@@ -1185,5 +1189,27 @@ let toastWarning = function () {
         position: 'bottom-right',
         loader: true,
         loaderBg: '#09b3ba'
+    });
+}
+
+
+/*
+* @author:Huang Zhenyang
+* 获取当前用户用户名
+* */
+function getUserName() {
+    $.ajax({
+        url: '/getUserName.do',
+        dataType: "json",
+        type: "get"
+    }).done(function (data) {
+        let app = new Vue({
+            el: '#userName',
+            data: {
+                message: data.userName
+            }
+        });
+    }).fail(function (xhr,status) {
+
     });
 }

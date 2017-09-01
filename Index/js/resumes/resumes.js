@@ -5,6 +5,8 @@
 $(document).ready(function () {
     setOverlay();
     getData();
+
+    getUserName(); //获取用户名
 });
 
 
@@ -177,6 +179,27 @@ function setOverlay() {
 }
 
 
+
+/*
+ * @author:Huang Zhenyang
+ * 获取当前用户用户名
+ * */
+function getUserName() {
+    $.ajax({
+        url: '/getUserName.do',
+        dataType: "json",
+        type: "get"
+    }).done(function (data) {
+        let app = new Vue({
+            el: '#userName',
+            data: {
+                message: data.userName
+            }
+        });
+    }).fail(function (xhr,status) {
+
+    });
+}
 
 
 
